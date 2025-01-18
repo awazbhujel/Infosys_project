@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Application</title>
+    <link rel="stylesheet" href="/static/bank_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 py-12 px-4 sm:px-6 lg:px-8">
+    <main class="min-h-screen">
+        <div class="container mx-auto">
+            <div class="button-container">
+              <button id="sign-out-btn" class="sign-out-btn">Sign Out</button>
+            </div>
+            <div class="card w-full max-w-4xl mx-auto shadow-lg">
+                 <div class="card-header bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                    <h2 class="card-title text-3xl font-bold text-center">BANK APPLICATION FORM</h2>
+                </div>
+                <div class="card-content p-6 bg-gray-50">
+                    <form id="bank-form" class="space-y-8">
+                        <!-- Personal Information Section -->
+                        <div class="space-y-6">
+                            <h2>1. Personal Information</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="form-item">
+                                    <label class="form-label" for="firstName">First Name</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="firstName" class="form-control" placeholder="John" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                                <div class="form-item">
+                                    <label class="form-label" for="middleName">Middle Name</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="middleName" class="form-control" placeholder="Michael" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                                <div class="form-item">
+                                    <label class="form-label" for="lastName">Last Name</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="lastName" class="form-control" placeholder="Doe" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-item">
+                                    <label class="form-label" for="dob">Date of Birth</label>
+                                    <div class="voice-input-container">
+                                        <input type="date" id="dob" class="form-control" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                                <div class="form-item">
+                                    <label class="form-label" for="gender">Gender</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="gender" class="form-control" placeholder="e.g., Male, Female" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-item">
+                                    <label class="form-label" for="maritalStatus">Marital Status</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="maritalStatus" class="form-control" placeholder="e.g., Married, Single" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                                <div class="form-item">
+                                    <label class="form-label" for="nationality">Nationality</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="nationality" class="form-control" placeholder="e.g., Indian" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="mothersMaidenName">Mother's Maiden Name</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="mothersMaidenName" class="form-control" placeholder="For security purposes" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information Section -->
+                        <div class="space-y-6">
+                            <h2>2. Contact Information</h2>
+                            <div class="space-y-4">
+                                <div class="form-item">
+                                    <label class="form-label" for="residentialStreet">Residential Street Address</label>
+                                    <div class="voice-input-container">
+                                        <input type="text" id="residentialStreet" class="form-control" placeholder="e.g., 123 Main St" required />
+                                        <span class="mic-icon">🎤</span>
+                                    </div>
+                                    <p class="form-message"></p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="form-item">
+                                        <label class="form-label" for="residentialCity">City</label>
+                                        <div class="voice-input-container">
+                                            <input type="text" id="residentialCity" class="form-control" placeholder="e.g., New York" required />
+                                            <span class="mic-icon">🎤</span>
+                                        </div>
+                                        <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-label" for="residentialState">State</label>
+                                        <div class="voice-input-container">
+                                            <input type="text" id="residentialState" class="form-control" placeholder="e.g., NY" required />
+                                            <span class="mic-icon">🎤</span>
+                                        </div>
+                                        <p class="form-message"></p>
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-label" for="residentialZip">ZIP Code</label>
+                                        <div class="voice-input-container">
+                                            <input type="text" id="residentialZip" class="form-control" placeholder="e.g., 123456" required />
+                                            <span class="mic-icon">🎤</span>
+                                        </div>
+                                        <p class="form-message"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="mobilePhone">Mobile Phone</label>
+                                <div class="voice-input-container">
+                                    <input type="tel" id="mobilePhone" class="form-control" placeholder="e.g., 9876543210" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="email">Email Address</label>
+                                <div class="voice-input-container">
+                                    <input type="email" id="email" class="form-control" placeholder="e.g., john.doe@example.com" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+
+                        <!-- Employment and Income Information Section -->
+                        <div class="space-y-6">
+                            <h2>3. Employment and Income Information</h2>
+                            <div class="form-item">
+                                <label class="form-label" for="employmentStatus">Employment Status</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="employmentStatus" class="form-control" placeholder="e.g., Employed, Self-Employed" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="occupation">Occupation/Job Title</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="occupation" class="form-control" placeholder="e.g., Software Engineer" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="monthlyIncome">Monthly Income (₹)</label>
+                                <div class="voice-input-container">
+                                    <input type="number" id="monthlyIncome" class="form-control" placeholder="e.g., 50000.00" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="incomeSource">Source of Income</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="incomeSource" class="form-control" placeholder="e.g., Salary, Business" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+
+                        <!-- Account Details Section -->
+                        <div class="space-y-6">
+                            <h2>4. Account Details</h2>
+                            <div class="form-item">
+                                <label class="form-label" for="accountType">Type of Account</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="accountType" class="form-control" placeholder="e.g., Savings, Checking" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="initialDeposit">Initial Deposit Amount (₹)</label>
+                                <div class="voice-input-container">
+                                    <input type="number" id="initialDeposit" class="form-control" placeholder="e.g., 1000.00" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="accountPurpose">Account Purpose</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="accountPurpose" class="form-control" placeholder="e.g., Savings, Payroll" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="modeOfOperation">Mode of Operation</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="modeOfOperation" class="form-control" placeholder="e.g., Single, Joint" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+
+                        <!-- Nominee Information Section -->
+                        <div class="space-y-6">
+                            <h2>5. Nominee Information</h2>
+                            <div class="form-item">
+                                <label class="form-label" for="nomineeName">Nominee Name</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="nomineeName" class="form-control" placeholder="e.g., Jane Doe" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="nomineeRelationship">Relationship</label>
+                                <div class="voice-input-container">
+                                    <input type="text" id="nomineeRelationship" class="form-control" placeholder="e.g., Spouse, Child" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label" for="nomineeContact">Nominee Contact Information</label>
+                                <div class="voice-input-container">
+                                    <input type="tel" id="nomineeContact" class="form-control" placeholder="e.g., 9876543210" required />
+                                    <span class="mic-icon">🎤</span>
+                                </div>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn w-full" id="submit-btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="toast-container"></div>
+    <script src="/static/bank_script.js"></script>
+</body>
+</html>

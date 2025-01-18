@@ -1,0 +1,890 @@
+2025-01-18 00:10:22,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 00:10:22,552 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 00:10:22,554 - INFO -  * Restarting with stat
+2025-01-18 00:10:23,064 - WARNING -  * Debugger is active!
+2025-01-18 00:10:23,070 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:10:30,766 - INFO - 127.0.0.1 - - [18/Jan/2025 00:10:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 00:10:30,780 - INFO - 127.0.0.1 - - [18/Jan/2025 00:10:30] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 00:10:30,906 - INFO - 127.0.0.1 - - [18/Jan/2025 00:10:30] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:10:30,907 - INFO - 127.0.0.1 - - [18/Jan/2025 00:10:30] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 00:10:47,918 - INFO - 127.0.0.1 - - [18/Jan/2025 00:10:47] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:13:23,192 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 00:13:23,192 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 00:13:23,194 - INFO -  * Restarting with stat
+2025-01-18 00:13:23,750 - WARNING -  * Debugger is active!
+2025-01-18 00:13:23,756 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:13:24,560 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 00:13:24,572 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:24] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 00:13:24,673 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:24] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:13:24,675 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:24] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 00:13:37,846 - INFO - Hashed password: $2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq
+2025-01-18 00:13:37,847 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 00:13:38,486 - INFO - Supabase API response: 201
+2025-01-18 00:13:38,488 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:38] "POST /signup HTTP/1.1" 200 -
+2025-01-18 00:13:57,020 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 00:13:57,172 - INFO - Supabase API response: 200
+2025-01-18 00:13:57,173 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 00:13:57,814 - INFO - Signin successful for user: aryan
+2025-01-18 00:13:57,837 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:57] "POST /signin HTTP/1.1" 200 -
+2025-01-18 00:13:58,890 - INFO - Rendering bank form for user: aryan
+2025-01-18 00:13:58,922 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:58] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 00:13:58,990 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:58] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:13:58,990 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:58] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 00:13:59,059 - INFO - User authenticated: aryan
+2025-01-18 00:13:59,063 - INFO - 127.0.0.1 - - [18/Jan/2025 00:13:59] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:15:09,351 - INFO - 127.0.0.1 - - [18/Jan/2025 00:15:09] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:15:16,065 - INFO - User authenticated: aryan
+2025-01-18 00:15:16,071 - INFO - 127.0.0.1 - - [18/Jan/2025 00:15:16] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:15:16,095 - INFO - Received bank form data:
+2025-01-18 00:15:16,096 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 00:15:16,393 - INFO - Supabase API response: 200
+2025-01-18 00:15:16,400 - INFO - Payload for Supabase:
+2025-01-18 00:15:16,401 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:15:16,565 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:15:16,566 - ERROR - Failed to insert form data into Supabase
+2025-01-18 00:15:16,573 - INFO - 127.0.0.1 - - [18/Jan/2025 00:15:16] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 00:23:51,646 - INFO - User authenticated: aryan
+2025-01-18 00:23:51,651 - INFO - 127.0.0.1 - - [18/Jan/2025 00:23:51] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:23:51,674 - INFO - Received bank form data:
+2025-01-18 00:23:51,675 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 00:23:52,166 - INFO - Supabase API response: 200
+2025-01-18 00:23:52,167 - INFO - Payload for Supabase:
+2025-01-18 00:23:52,168 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:23:52,296 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:23:52,297 - ERROR - Failed to insert form data into Supabase
+2025-01-18 00:23:52,304 - INFO - 127.0.0.1 - - [18/Jan/2025 00:23:52] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 00:23:59,458 - INFO - User authenticated: aryan
+2025-01-18 00:23:59,466 - INFO - 127.0.0.1 - - [18/Jan/2025 00:23:59] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:23:59,490 - INFO - Received bank form data:
+2025-01-18 00:23:59,491 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 00:23:59,642 - INFO - Supabase API response: 200
+2025-01-18 00:23:59,644 - INFO - Payload for Supabase:
+2025-01-18 00:23:59,645 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:23:59,768 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:23:59,769 - ERROR - Failed to insert form data into Supabase
+2025-01-18 00:23:59,774 - INFO - 127.0.0.1 - - [18/Jan/2025 00:23:59] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 00:29:20,686 - INFO -  * Detected change in 'C:\\Users\\ARYAN\\Desktop\\WORK\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 00:29:20,749 - INFO -  * Restarting with stat
+2025-01-18 00:29:21,321 - WARNING -  * Debugger is active!
+2025-01-18 00:29:21,328 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:29:24,829 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 00:29:24,830 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 00:29:24,832 - INFO -  * Restarting with stat
+2025-01-18 00:29:25,369 - WARNING -  * Debugger is active!
+2025-01-18 00:29:25,377 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:29:30,846 - INFO - 127.0.0.1 - - [18/Jan/2025 00:29:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-18 00:29:36,773 - INFO - 127.0.0.1 - - [18/Jan/2025 00:29:36] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-18 00:29:45,074 - INFO -  * Detected change in 'C:\\Users\\ARYAN\\Desktop\\WORK\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 00:29:45,137 - INFO -  * Restarting with stat
+2025-01-18 00:29:45,700 - WARNING -  * Debugger is active!
+2025-01-18 00:29:45,707 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:29:48,853 - INFO - 127.0.0.1 - - [18/Jan/2025 00:29:48] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-18 00:30:02,810 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 00:30:02,810 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 00:30:02,814 - INFO -  * Restarting with stat
+2025-01-18 00:30:03,340 - WARNING -  * Debugger is active!
+2025-01-18 00:30:03,346 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:30:11,318 - INFO - 127.0.0.1 - - [18/Jan/2025 00:30:11] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 00:30:11,339 - INFO - 127.0.0.1 - - [18/Jan/2025 00:30:11] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 00:30:11,456 - INFO - 127.0.0.1 - - [18/Jan/2025 00:30:11] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:30:11,458 - INFO - 127.0.0.1 - - [18/Jan/2025 00:30:11] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 00:33:35,517 - INFO -  * Detected change in 'C:\\Users\\ARYAN\\Desktop\\WORK\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 00:33:35,620 - INFO -  * Restarting with stat
+2025-01-18 00:33:36,188 - WARNING -  * Debugger is active!
+2025-01-18 00:33:36,195 - INFO -  * Debugger PIN: 144-299-963
+2025-01-18 00:33:38,518 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:38] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 00:33:38,643 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:38] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 00:33:38,644 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:38] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:33:39,596 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:39] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 00:33:39,644 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:39] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 00:33:39,645 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:39] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:33:59,046 - INFO - Hashed password: $2b$12$1OtKnxviOhwJ/R3BrwvqIuUdDNEO.BjSOefUUy.otBF9Wwtyswa0K
+2025-01-18 00:33:59,047 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 00:33:59,804 - ERROR - Supabase API request failed: 409 Client Error: Conflict for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 00:33:59,814 - INFO - 127.0.0.1 - - [18/Jan/2025 00:33:59] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+2025-01-18 00:34:13,725 - INFO - Hashed password: $2b$12$dh35HWR20XqNbTVmWT1nVO4U.ShAUwZ0TBOX897xwqhbhemLmwtKi
+2025-01-18 00:34:13,727 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 00:34:13,851 - INFO - Supabase API response: 201
+2025-01-18 00:34:13,859 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:13] "POST /signup HTTP/1.1" 200 -
+2025-01-18 00:34:20,217 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan@gmail.com"}
+2025-01-18 00:34:20,391 - INFO - Supabase API response: 200
+2025-01-18 00:34:20,392 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 00:34:21,046 - INFO - Signin successful for user: aryan
+2025-01-18 00:34:21,053 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:21] "POST /signin HTTP/1.1" 200 -
+2025-01-18 00:34:22,102 - INFO - Rendering bank form for user: aryan
+2025-01-18 00:34:22,117 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:22] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 00:34:22,187 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:22] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 00:34:22,202 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:22] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 00:34:22,228 - INFO - User authenticated: aryan
+2025-01-18 00:34:22,235 - INFO - 127.0.0.1 - - [18/Jan/2025 00:34:22] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:35:29,283 - INFO - User authenticated: aryan
+2025-01-18 00:35:29,290 - INFO - 127.0.0.1 - - [18/Jan/2025 00:35:29] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 00:35:29,314 - INFO - Received bank form data: {'firstName': 'John', 'lastName': 'Doe', 'dob': '2002-03-12', 'gender': 'Male', 'maritalStatus': 'Single', 'nationality': 'American', 'mothersMaidenName': 'Jane Smith', 'residentialStreet': '123 Main St', 'residentialCity': 'Anytown', 'residentialState': 'CA', 'residentialZip': '123456', 'mobilePhone': '1234567890', 'email': 'karan@gmail.com', 'employmentStatus': 'Employed', 'occupation': 'Software Engineer', 'monthlyIncome': 50000, 'incomeSource': 'Salary', 'accountType': 'Savings', 'initialDeposit': 1000, 'accountPurpose': 'Personal Savings', 'modeOfOperation': 'Single', 'nomineeName': 'Alice Doe', 'nomineeRelationship': 'Sister', 'nomineeContact': '9876543210'}
+2025-01-18 00:35:29,316 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan@gmail.com"}
+2025-01-18 00:35:29,457 - INFO - Supabase API response: 200
+2025-01-18 00:35:29,459 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 00:35:29,459 - INFO - Transformed payload for Supabase: {'firstname': 'John', 'lastname': 'Doe', 'dob': '2002-03-12', 'gender': 'Male', 'maritalstatus': 'Single', 'nationality': 'American', 'mothersmaidenname': 'Jane Smith', 'residentialstreet': '123 Main St', 'residentialcity': 'Anytown', 'residentialstate': 'CA', 'residentialzip': '123456', 'mobilephone': '1234567890', 'email': 'karan@gmail.com', 'employmentstatus': 'Employed', 'occupation': 'Software Engineer', 'monthlyincome': 50000, 'incomesource': 'Salary', 'accounttype': 'Savings', 'initialdeposit': 1000, 'accountpurpose': 'Personal Savings', 'modeofoperation': 'Single', 'nomineename': 'Alice Doe', 'nomineerelationship': 'Sister', 'nomineecontact': '9876543210', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 00:35:29,460 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 00:35:29,614 - INFO - Supabase API response: 201
+2025-01-18 00:35:29,615 - INFO - Form data inserted successfully!
+2025-01-18 00:35:29,621 - INFO - 127.0.0.1 - - [18/Jan/2025 00:35:29] "POST /submit-bank-form HTTP/1.1" 200 -
+2025-01-18 09:33:28,316 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 09:33:28,317 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 09:33:28,320 - INFO -  * Restarting with stat
+2025-01-18 09:33:28,953 - WARNING -  * Debugger is active!
+2025-01-18 09:33:28,960 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 09:33:31,095 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 09:33:31,114 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:31] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 09:33:31,245 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:31] "GET /static/auth_style.css HTTP/1.1" 200 -
+2025-01-18 09:33:31,247 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:31] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 09:33:31,413 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-18 09:33:44,846 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:44] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 09:33:44,936 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:44] "GET /static/auth_style.css HTTP/1.1" 200 -
+2025-01-18 09:33:44,937 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:44] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 09:33:45,114 - INFO - 127.0.0.1 - - [18/Jan/2025 09:33:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-18 09:36:38,544 - INFO - Hashed password: $2b$12$B7Mvt454SIRuo.MSd209Fu8g9.eKUIBstIiBDnpIezDquycBE31YK
+2025-01-18 09:36:38,545 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 09:36:39,292 - INFO - Supabase API response: 201
+2025-01-18 09:36:39,299 - INFO - 127.0.0.1 - - [18/Jan/2025 09:36:39] "POST /signup HTTP/1.1" 200 -
+2025-01-18 09:36:48,465 - INFO - 127.0.0.1 - - [18/Jan/2025 09:36:48] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 09:38:47,033 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan12@gmail.com"}
+2025-01-18 09:38:47,803 - INFO - Supabase API response: 200
+2025-01-18 09:38:47,805 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 09:38:48,455 - INFO - Signin successful for user: aryan
+2025-01-18 09:38:48,461 - INFO - 127.0.0.1 - - [18/Jan/2025 09:38:48] "POST /signin HTTP/1.1" 200 -
+2025-01-18 09:38:49,505 - INFO - Rendering bank form for user: aryan
+2025-01-18 09:38:49,520 - INFO - 127.0.0.1 - - [18/Jan/2025 09:38:49] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 09:38:49,557 - INFO - 127.0.0.1 - - [18/Jan/2025 09:38:49] "GET /static/bank_style.css HTTP/1.1" 200 -
+2025-01-18 09:38:49,557 - INFO - 127.0.0.1 - - [18/Jan/2025 09:38:49] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 09:38:49,616 - INFO - User authenticated: aryan
+2025-01-18 09:38:49,619 - INFO - 127.0.0.1 - - [18/Jan/2025 09:38:49] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 09:42:42,158 - INFO - User authenticated: aryan
+2025-01-18 09:42:42,164 - INFO - 127.0.0.1 - - [18/Jan/2025 09:42:42] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 09:42:42,184 - INFO - Received bank form data: {'firstName': 'Karan', 'lastName': 'Mahajan', 'dob': '2004-05-19', 'gender': 'Male', 'maritalStatus': 'Single', 'nationality': 'Indian', 'mothersMaidenName': 'Sumathi', 'residentialStreet': 'Nana Peth Pune', 'residentialCity': 'Pune', 'residentialState': 'Maharashtra', 'residentialZip': '123000', 'mobilePhone': '8432961847', 'email': 'karan12@gmail.com', 'employmentStatus': 'Employed', 'occupation': 'Ai Engineer', 'monthlyIncome': 80000, 'incomeSource': 'Salary', 'accountType': 'Savings', 'initialDeposit': 9000, 'accountPurpose': 'Savings', 'modeOfOperation': 'Single', 'nomineeName': 'Normal', 'nomineeRelationship': 'Spouse', 'nomineeContact': '1234567890'}
+2025-01-18 09:42:42,186 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan12@gmail.com"}
+2025-01-18 09:42:42,908 - INFO - Supabase API response: 200
+2025-01-18 09:42:42,909 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 09:42:42,910 - INFO - Transformed payload for Supabase: {'firstname': 'Karan', 'lastname': 'Mahajan', 'dob': '2004-05-19', 'gender': 'Male', 'maritalstatus': 'Single', 'nationality': 'Indian', 'mothersmaidenname': 'Sumathi', 'residentialstreet': 'Nana Peth Pune', 'residentialcity': 'Pune', 'residentialstate': 'Maharashtra', 'residentialzip': '123000', 'mobilephone': '8432961847', 'email': 'karan12@gmail.com', 'employmentstatus': 'Employed', 'occupation': 'Ai Engineer', 'monthlyincome': 80000, 'incomesource': 'Salary', 'accounttype': 'Savings', 'initialdeposit': 9000, 'accountpurpose': 'Savings', 'modeofoperation': 'Single', 'nomineename': 'Normal', 'nomineerelationship': 'Spouse', 'nomineecontact': '1234567890', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 09:42:42,911 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:42:43,145 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:42:43,146 - ERROR - Failed to insert form data into Supabase
+2025-01-18 09:42:43,153 - INFO - 127.0.0.1 - - [18/Jan/2025 09:42:43] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 09:43:11,860 - INFO - 127.0.0.1 - - [18/Jan/2025 09:43:11] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 09:43:20,125 - INFO - User authenticated: aryan
+2025-01-18 09:43:20,130 - INFO - 127.0.0.1 - - [18/Jan/2025 09:43:20] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 09:43:20,156 - INFO - Received bank form data: {'firstName': 'Karan', 'lastName': 'Mahajan', 'dob': '2004-05-19', 'gender': 'Male', 'maritalStatus': 'Single', 'nationality': 'Indian', 'mothersMaidenName': 'Sumathi', 'residentialStreet': 'Nana Peth Pune', 'residentialCity': 'Pune', 'residentialState': 'Maharashtra', 'residentialZip': '123000', 'mobilePhone': '8432961847', 'email': 'karan12@gmail.com', 'employmentStatus': 'Employed', 'occupation': 'Ai Engineer', 'monthlyIncome': 80000, 'incomeSource': 'Salary', 'accountType': 'Savings', 'initialDeposit': 9000, 'accountPurpose': 'Savings', 'modeOfOperation': 'Single', 'nomineeName': 'Normal', 'nomineeRelationship': 'Spouse', 'nomineeContact': '1234567890'}
+2025-01-18 09:43:20,157 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan12@gmail.com"}
+2025-01-18 09:43:20,412 - INFO - Supabase API response: 200
+2025-01-18 09:43:20,414 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 09:43:20,415 - INFO - Transformed payload for Supabase: {'firstname': 'Karan', 'lastname': 'Mahajan', 'dob': '2004-05-19', 'gender': 'Male', 'maritalstatus': 'Single', 'nationality': 'Indian', 'mothersmaidenname': 'Sumathi', 'residentialstreet': 'Nana Peth Pune', 'residentialcity': 'Pune', 'residentialstate': 'Maharashtra', 'residentialzip': '123000', 'mobilephone': '8432961847', 'email': 'karan12@gmail.com', 'employmentstatus': 'Employed', 'occupation': 'Ai Engineer', 'monthlyincome': 80000, 'incomesource': 'Salary', 'accounttype': 'Savings', 'initialdeposit': 9000, 'accountpurpose': 'Savings', 'modeofoperation': 'Single', 'nomineename': 'Normal', 'nomineerelationship': 'Spouse', 'nomineecontact': '1234567890', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 09:43:20,416 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:43:20,660 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:43:20,662 - ERROR - Failed to insert form data into Supabase
+2025-01-18 09:43:20,668 - INFO - 127.0.0.1 - - [18/Jan/2025 09:43:20] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 09:48:24,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 09:48:24,475 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 09:48:24,476 - INFO -  * Restarting with stat
+2025-01-18 09:48:25,148 - WARNING -  * Debugger is active!
+2025-01-18 09:48:25,155 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 09:48:30,161 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 09:48:30,176 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:30] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 09:48:30,274 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:30] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 09:48:30,275 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:30] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 09:48:34,497 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:34] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 09:48:34,536 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:34] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 09:48:34,536 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:34] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 09:48:42,079 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 09:48:43,350 - INFO - Supabase API response: 200
+2025-01-18 09:48:43,351 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 09:48:43,702 - INFO - Signin successful for user: aryan
+2025-01-18 09:48:43,706 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:43] "POST /signin HTTP/1.1" 200 -
+2025-01-18 09:48:44,730 - INFO - Rendering bank form for user: aryan
+2025-01-18 09:48:44,739 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:44] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 09:48:44,779 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:44] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 09:48:44,794 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:44] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 09:48:44,806 - INFO - User authenticated: aryan
+2025-01-18 09:48:44,810 - INFO - 127.0.0.1 - - [18/Jan/2025 09:48:44] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 09:51:21,850 - INFO - User authenticated: aryan
+2025-01-18 09:51:21,854 - INFO - 127.0.0.1 - - [18/Jan/2025 09:51:21] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 09:51:21,875 - INFO - Received bank form data: {'firstName': 'john', 'lastName': 'doe', 'dob': '2000-02-12', 'gender': 'male', 'maritalStatus': 'single', 'nationality': 'indian', 'mothersMaidenName': 'maiden', 'residentialStreet': 'nana peth', 'residentialCity': 'pune', 'residentialState': 'maharashtra', 'residentialZip': '411002', 'mobilePhone': '8432961847', 'email': 'aryan@gmail.com', 'employmentStatus': 'employed', 'occupation': 'mechanical engineer', 'monthlyIncome': 10000, 'incomeSource': 'business', 'accountType': 'savings', 'initialDeposit': 1000, 'accountPurpose': 'payroll', 'modeOfOperation': 'joint', 'nomineeName': 'jok', 'nomineeRelationship': 'spouse', 'nomineeContact': '1234567890'}
+2025-01-18 09:51:21,876 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 09:51:22,478 - INFO - Supabase API response: 200
+2025-01-18 09:51:22,479 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 09:51:22,479 - INFO - Transformed payload for Supabase: {'firstname': 'john', 'lastname': 'doe', 'dob': '2000-02-12', 'gender': 'male', 'maritalstatus': 'single', 'nationality': 'indian', 'mothersmaidenname': 'maiden', 'residentialstreet': 'nana peth', 'residentialcity': 'pune', 'residentialstate': 'maharashtra', 'residentialzip': '411002', 'mobilephone': '8432961847', 'email': 'aryan@gmail.com', 'employmentstatus': 'employed', 'occupation': 'mechanical engineer', 'monthlyincome': 10000, 'incomesource': 'business', 'accounttype': 'savings', 'initialdeposit': 1000, 'accountpurpose': 'payroll', 'modeofoperation': 'joint', 'nomineename': 'jok', 'nomineerelationship': 'spouse', 'nomineecontact': '1234567890', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 09:51:22,480 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:51:22,726 - ERROR - Supabase API request failed: 400 Client Error: Bad Request for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 09:51:22,728 - ERROR - Failed to insert form data into Supabase
+2025-01-18 09:51:22,733 - INFO - 127.0.0.1 - - [18/Jan/2025 09:51:22] "[35m[1mPOST /submit-bank-form HTTP/1.1[0m" 500 -
+2025-01-18 09:51:35,783 - INFO - 127.0.0.1 - - [18/Jan/2025 09:51:35] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:01:24,247 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:01:24,302 - INFO -  * Restarting with stat
+2025-01-18 10:01:24,949 - WARNING -  * Debugger is active!
+2025-01-18 10:01:24,956 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:01:28,179 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:01:28,233 - INFO -  * Restarting with stat
+2025-01-18 10:01:28,853 - WARNING -  * Debugger is active!
+2025-01-18 10:01:28,859 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:01:34,398 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:01:34,399 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:01:34,400 - INFO -  * Restarting with stat
+2025-01-18 10:01:34,983 - WARNING -  * Debugger is active!
+2025-01-18 10:01:34,990 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:01:37,085 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:01:37,099 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:37] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:01:37,220 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:37] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:01:37,221 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:37] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:01:42,004 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:01:42,014 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:42] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:01:42,042 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:42] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:01:42,043 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:42] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:01:50,334 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:50] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:01:50,374 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:50] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:01:50,374 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:50] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:01:55,206 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:01:56,021 - INFO - Supabase API response: 200
+2025-01-18 10:01:56,023 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:01:56,389 - INFO - Signin successful for user: aryan
+2025-01-18 10:01:56,393 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:56] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:01:57,431 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:01:57,440 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:57] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:01:57,477 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:57] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:01:57,479 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:57] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:01:57,489 - INFO - User authenticated: aryan
+2025-01-18 10:01:57,493 - INFO - 127.0.0.1 - - [18/Jan/2025 10:01:57] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:02:00,739 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:02:00,745 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:00] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:02:00,785 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:00] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:02:00,787 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:00] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:02:00,864 - INFO - User authenticated: aryan
+2025-01-18 10:02:00,872 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:00] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:02:04,279 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:04] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:02:06,831 - INFO - 127.0.0.1 - - [18/Jan/2025 10:02:06] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:04:18,280 - INFO - User authenticated: aryan
+2025-01-18 10:04:18,285 - INFO - 127.0.0.1 - - [18/Jan/2025 10:04:18] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:04:18,306 - INFO - Received bank form data: {'firstName': 'john', 'lastName': 'doe', 'dob': '2005-02-12', 'gender': 'male', 'maritalStatus': 'single', 'nationality': 'indian', 'mothersMaidenName': 'maiden', 'residentialStreet': 'nana peth', 'residentialCity': 'pune', 'residentialState': 'maharashtra', 'residentialZip': '411002', 'mobilePhone': '8432961847', 'email': 'aryan@gmail.com', 'employmentStatus': 'employed', 'occupation': 'mechanical engineer', 'monthlyIncome': 500000, 'incomeSource': 'business', 'accountType': 'savings', 'initialDeposit': 12222, 'accountPurpose': 'payroll', 'modeOfOperation': 'single', 'nomineeName': 'jok', 'nomineeRelationship': 'spouse', 'nomineeContact': '1234567890'}
+2025-01-18 10:04:18,307 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:04:19,072 - INFO - Supabase API response: 200
+2025-01-18 10:04:19,074 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:04:19,074 - INFO - Transformed payload for Supabase: {'firstname': 'john', 'lastname': 'doe', 'dob': '2005-02-12', 'gender': 'male', 'maritalstatus': 'single', 'nationality': 'indian', 'mothersmaidenname': 'maiden', 'residentialstreet': 'nana peth', 'residentialcity': 'pune', 'residentialstate': 'maharashtra', 'residentialzip': '411002', 'mobilephone': '8432961847', 'email': 'aryan@gmail.com', 'employmentstatus': 'employed', 'occupation': 'mechanical engineer', 'monthlyincome': 500000, 'incomesource': 'business', 'accounttype': 'savings', 'initialdeposit': 12222, 'accountpurpose': 'payroll', 'modeofoperation': 'single', 'nomineename': 'jok', 'nomineerelationship': 'spouse', 'nomineecontact': '1234567890', 'middlename': '', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 10:04:19,075 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 10:04:19,298 - INFO - Supabase API response: 201
+2025-01-18 10:04:19,299 - INFO - Form data inserted successfully!
+2025-01-18 10:04:19,303 - INFO - 127.0.0.1 - - [18/Jan/2025 10:04:19] "POST /submit-bank-form HTTP/1.1" 200 -
+2025-01-18 10:12:50,566 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:12:50,567 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:12:50,569 - INFO -  * Restarting with stat
+2025-01-18 10:12:51,174 - WARNING -  * Debugger is active!
+2025-01-18 10:12:51,179 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:12:52,100 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:12:52,112 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:52] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:12:52,212 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:52] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:12:52,214 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:52] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:12:56,111 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:12:56,903 - INFO - Supabase API response: 200
+2025-01-18 10:12:56,905 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:12:57,272 - INFO - Signin successful for user: aryan
+2025-01-18 10:12:57,278 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:57] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:12:58,332 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:12:58,354 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:58] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:12:58,416 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:58] "GET /static/bank_style.css HTTP/1.1" 200 -
+2025-01-18 10:12:58,416 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:58] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 10:12:58,851 - INFO - User authenticated: aryan
+2025-01-18 10:12:58,856 - INFO - 127.0.0.1 - - [18/Jan/2025 10:12:58] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:24:04,773 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:24:04,774 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:24:04,776 - INFO -  * Restarting with stat
+2025-01-18 10:24:05,464 - WARNING -  * Debugger is active!
+2025-01-18 10:24:05,471 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:24:06,695 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:24:06,728 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:06] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:24:06,835 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:06] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:24:06,836 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:06] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:24:12,128 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:24:12,761 - INFO - Supabase API response: 200
+2025-01-18 10:24:12,763 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:24:13,350 - INFO - Signin successful for user: aryan
+2025-01-18 10:24:13,355 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:13] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:24:14,415 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:24:14,430 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:14] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:24:14,525 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:14] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 10:24:14,526 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:14] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:24:14,641 - INFO - User authenticated: aryan
+2025-01-18 10:24:14,649 - INFO - 127.0.0.1 - - [18/Jan/2025 10:24:14] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:25:14,688 - INFO - User authenticated: aryan
+2025-01-18 10:25:14,695 - INFO - 127.0.0.1 - - [18/Jan/2025 10:25:14] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:25:14,729 - INFO - Received bank form data: {'firstName': 'john', 'middleName': 'Michael', 'lastName': 'JATHAR', 'dob': '2000-02-12', 'gender': 'Male', 'maritalStatus': 'single', 'nationality': 'American', 'mothersMaidenName': 'Jane Smith', 'residentialStreet': 'vew vewvwe', 'residentialCity': 'Anytown', 'residentialState': 'CA', 'residentialZip': '324444', 'mobilePhone': '1234567890', 'email': 'karan@gmail.com', 'employmentStatus': 'Employed', 'occupation': 'Software Engineer', 'monthlyIncome': 13214241, 'incomeSource': 'Salary', 'accountType': 'Savings', 'initialDeposit': 1000, 'accountPurpose': 'savings', 'modeOfOperation': 'Single', 'nomineeName': 'Alice Doe', 'nomineeRelationship': 'EWVWEW', 'nomineeContact': '1234567890'}
+2025-01-18 10:25:14,729 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:25:15,012 - INFO - Supabase API response: 200
+2025-01-18 10:25:15,013 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:25:15,014 - INFO - Transformed payload for Supabase: {'firstname': 'john', 'middlename': 'Michael', 'lastname': 'JATHAR', 'dob': '2000-02-12', 'gender': 'Male', 'maritalstatus': 'single', 'nationality': 'American', 'mothersmaidenname': 'Jane Smith', 'residentialstreet': 'vew vewvwe', 'residentialcity': 'Anytown', 'residentialstate': 'CA', 'residentialzip': '324444', 'mobilephone': '1234567890', 'email': 'karan@gmail.com', 'employmentstatus': 'Employed', 'occupation': 'Software Engineer', 'monthlyincome': 13214241, 'incomesource': 'Salary', 'accounttype': 'Savings', 'initialdeposit': 1000, 'accountpurpose': 'savings', 'modeofoperation': 'Single', 'nomineename': 'Alice Doe', 'nomineerelationship': 'EWVWEW', 'nomineecontact': '1234567890', 'user_id': '08979e64-f220-4280-8bb6-193fbe2ae6c9'}
+2025-01-18 10:25:15,016 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/bank_forms
+2025-01-18 10:25:15,290 - INFO - Supabase API response: 201
+2025-01-18 10:25:15,292 - INFO - Form data inserted successfully!
+2025-01-18 10:25:15,297 - INFO - 127.0.0.1 - - [18/Jan/2025 10:25:15] "POST /submit-bank-form HTTP/1.1" 200 -
+2025-01-18 10:27:09,757 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:27:09,757 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:27:09,760 - INFO -  * Restarting with stat
+2025-01-18 10:27:10,441 - WARNING -  * Debugger is active!
+2025-01-18 10:27:10,448 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:27:11,173 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:11] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:27:11,200 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:11] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:11,307 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:11] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:11,307 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:11] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:27:18,346 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:18] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:18,398 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:18] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:27:18,406 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:18] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:18,502 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-18 10:27:23,807 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.aryan@gmail.com"}
+2025-01-18 10:27:24,733 - INFO - Supabase API response: 200
+2025-01-18 10:27:24,734 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:27:25,360 - INFO - Signin successful for user: aryan
+2025-01-18 10:27:25,367 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:25] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:27:26,409 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:27:26,421 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:26] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:26,471 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:26] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:26,472 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:26] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 10:27:26,537 - INFO - User authenticated: aryan
+2025-01-18 10:27:26,540 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:26] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:27:42,788 - INFO - Sign out endpoint hit!
+2025-01-18 10:27:42,789 - INFO - Email and username removed from session
+2025-01-18 10:27:42,794 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:42] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:27:42,813 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:42] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:42,840 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:42] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:42,842 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:42] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:27:48,964 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.aryan12@gmail.com"}
+2025-01-18 10:27:49,390 - INFO - Supabase API response: 200
+2025-01-18 10:27:49,392 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:27:50,047 - INFO - Signin successful for user: aryan
+2025-01-18 10:27:50,058 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:50] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:27:51,116 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:27:51,124 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:51] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:51,170 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:51] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:27:51,170 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:51] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:51,184 - INFO - User authenticated: aryan
+2025-01-18 10:27:51,188 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:51] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:27:56,628 - INFO - Sign out endpoint hit!
+2025-01-18 10:27:56,629 - INFO - Email and username removed from session
+2025-01-18 10:27:56,634 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:56] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:27:56,654 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:56] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:27:56,688 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:56] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:27:56,689 - INFO - 127.0.0.1 - - [18/Jan/2025 10:27:56] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:29:07,969 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:07] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:29:07,990 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:07] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:29:07,992 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:07] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:29:13,898 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.john07@gmail.com"}
+2025-01-18 10:29:14,231 - INFO - Supabase API response: 200
+2025-01-18 10:29:14,232 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:29:14,609 - INFO - Signin successful for user: aryan
+2025-01-18 10:29:14,615 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:14] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:29:15,206 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.john07@gmail.com"}
+2025-01-18 10:29:15,466 - INFO - Supabase API response: 200
+2025-01-18 10:29:15,468 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:29:15,638 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:29:15,643 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:15] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:29:15,683 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:15] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:29:15,683 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:15] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 10:29:15,695 - INFO - User authenticated: aryan
+2025-01-18 10:29:15,698 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:15] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:29:15,831 - INFO - Signin successful for user: aryan
+2025-01-18 10:29:15,835 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:15] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:29:19,034 - INFO - Sign out endpoint hit!
+2025-01-18 10:29:19,035 - INFO - Email and username removed from session
+2025-01-18 10:29:19,038 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:19] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:29:19,053 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:19] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:29:19,077 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:19] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:29:19,078 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:19] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:29:27,846 - INFO - Hashed password: $2b$12$0JJe2Z0HNooBuG60uva8wulnky4qgGhW8M7OBp3Hn71xkiMx96E9C
+2025-01-18 10:29:27,847 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 10:29:28,533 - ERROR - Supabase API request failed: 409 Client Error: Conflict for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 10:29:28,535 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:28] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+2025-01-18 10:29:33,109 - INFO - Hashed password: $2b$12$U9Ivs9ss6Bm93pGb76RU8.IEciPCT8I1U3vZ/ZF24OLZH8nWH1ZX.
+2025-01-18 10:29:33,110 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 10:29:33,345 - INFO - Supabase API response: 201
+2025-01-18 10:29:33,347 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:33] "POST /signup HTTP/1.1" 200 -
+2025-01-18 10:29:43,989 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test32@gmail.com"}
+2025-01-18 10:29:44,510 - INFO - Supabase API response: 200
+2025-01-18 10:29:44,511 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:29:45,154 - INFO - Signin successful for user: aryan
+2025-01-18 10:29:45,166 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:45] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:29:46,213 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:29:46,221 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:46] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:29:46,270 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:46] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:29:46,271 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:46] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:29:46,292 - INFO - User authenticated: aryan
+2025-01-18 10:29:46,300 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:46] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:29:48,555 - INFO - Sign out endpoint hit!
+2025-01-18 10:29:48,556 - INFO - Email and username removed from session
+2025-01-18 10:29:48,561 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:48] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:29:48,580 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:48] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:29:48,608 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:48] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:29:48,616 - INFO - 127.0.0.1 - - [18/Jan/2025 10:29:48] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:41:44,622 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:41:44,623 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:41:44,626 - INFO -  * Restarting with stat
+2025-01-18 10:41:45,266 - WARNING -  * Debugger is active!
+2025-01-18 10:41:45,272 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:41:47,088 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:41:47,115 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:47] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:41:47,217 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:47] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:41:47,218 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:47] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:41:55,937 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.tcoeritdept@gmail.com"}
+2025-01-18 10:41:56,618 - INFO - Supabase API response: 200
+2025-01-18 10:41:56,620 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:41:57,268 - INFO - Signin successful for user: aryan
+2025-01-18 10:41:57,274 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:57] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:41:58,334 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:41:58,347 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:58] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:41:58,409 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:58] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 10:41:58,410 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:58] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:41:58,475 - INFO - User authenticated: aryan
+2025-01-18 10:41:58,480 - INFO - 127.0.0.1 - - [18/Jan/2025 10:41:58] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:44:19,600 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:44:19,658 - INFO -  * Restarting with stat
+2025-01-18 10:44:20,267 - WARNING -  * Debugger is active!
+2025-01-18 10:44:20,274 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:44:22,410 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:44:22,424 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:22] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:44:22,541 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:22] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:44:22,549 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:22] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:44:22,562 - INFO - User authenticated: aryan
+2025-01-18 10:44:22,566 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:22] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:44:23,509 - INFO - Sign out endpoint hit!
+2025-01-18 10:44:23,510 - INFO - Email and username removed from session
+2025-01-18 10:44:23,514 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:23] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:44:23,541 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:23] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:44:23,583 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:23] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:44:23,583 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:23] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:44:24,896 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:24] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:44:24,925 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:24] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:44:24,926 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:24] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:44:25,334 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:25] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:44:25,368 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:25] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:44:25,369 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:25] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:44:32,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:44:32,881 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:44:32,883 - INFO -  * Restarting with stat
+2025-01-18 10:44:33,531 - WARNING -  * Debugger is active!
+2025-01-18 10:44:33,542 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:44:35,900 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:44:35,911 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:35] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:44:36,006 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:36] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:44:36,007 - INFO - 127.0.0.1 - - [18/Jan/2025 10:44:36] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:44:59,479 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.tcoeritdept@gmail.com"}
+2025-01-18 10:45:00,670 - INFO - Supabase API response: 200
+2025-01-18 10:45:00,671 - INFO - User found: {'id': '08979e64-f220-4280-8bb6-193fbe2ae6c9', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$uOsk1OedsxKWcPBcUcPIG.RsbM3YBuKD9fiCioZ9lL41TjObVpGCq'}
+2025-01-18 10:45:01,017 - INFO - Signin successful for user: aryan
+2025-01-18 10:45:01,034 - INFO - 127.0.0.1 - - [18/Jan/2025 10:45:01] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:45:02,086 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:45:02,094 - INFO - 127.0.0.1 - - [18/Jan/2025 10:45:02] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:45:02,150 - INFO - 127.0.0.1 - - [18/Jan/2025 10:45:02] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:45:02,150 - INFO - 127.0.0.1 - - [18/Jan/2025 10:45:02] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:45:02,215 - INFO - User authenticated: aryan
+2025-01-18 10:45:02,220 - INFO - 127.0.0.1 - - [18/Jan/2025 10:45:02] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:47:05,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:47:05,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:47:05,478 - INFO -  * Restarting with stat
+2025-01-18 10:47:06,081 - WARNING -  * Debugger is active!
+2025-01-18 10:47:06,087 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:47:07,058 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:47:07,085 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:07] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:47:07,187 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:07] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:47:07,190 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:07] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:47:13,544 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:47:14,814 - INFO - Supabase API response: 200
+2025-01-18 10:47:14,815 - WARNING - User not found for email: test@gmail.com
+2025-01-18 10:47:14,822 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:14] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 10:47:23,340 - INFO - Hashed password: $2b$12$C3Y2HoCitC5y6WUWHPiX7uO/r515YiWLmczxTK5EGpFFQjH9Mn84.
+2025-01-18 10:47:23,341 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 10:47:23,721 - INFO - Supabase API response: 201
+2025-01-18 10:47:23,727 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:23] "POST /signup HTTP/1.1" 200 -
+2025-01-18 10:47:25,821 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:47:26,079 - INFO - Supabase API response: 200
+2025-01-18 10:47:26,080 - INFO - User found: {'id': 'cd79c104-6163-49ce-9c16-a03ea8fcbee4', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$C3Y2HoCitC5y6WUWHPiX7uO/r515YiWLmczxTK5EGpFFQjH9Mn84.'}
+2025-01-18 10:47:26,720 - INFO - Signin successful for user: aryan
+2025-01-18 10:47:26,725 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:26] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:47:27,781 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:47:27,796 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:27] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:47:27,860 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:27] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:47:27,873 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:27] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:47:27,890 - INFO - User authenticated: aryan
+2025-01-18 10:47:27,895 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:27] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:47:28,870 - INFO - Sign out endpoint hit!
+2025-01-18 10:47:28,870 - INFO - Email and username removed from session
+2025-01-18 10:47:28,876 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:28] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:47:28,904 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:28] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:47:28,953 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:28] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:47:28,956 - INFO - 127.0.0.1 - - [18/Jan/2025 10:47:28] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:48:03,390 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan@gmail.com"}
+2025-01-18 10:48:03,653 - INFO - Supabase API response: 200
+2025-01-18 10:48:03,655 - INFO - User found: {'id': 'cd79c104-6163-49ce-9c16-a03ea8fcbee4', 'username': 'aryan', 'email': 'test@gmail.com', 'password': '$2b$12$C3Y2HoCitC5y6WUWHPiX7uO/r515YiWLmczxTK5EGpFFQjH9Mn84.'}
+2025-01-18 10:48:04,305 - INFO - Signin successful for user: aryan
+2025-01-18 10:48:04,317 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:04] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:48:05,382 - INFO - Rendering bank form for user: aryan
+2025-01-18 10:48:05,392 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:05] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:48:05,450 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:05] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:48:05,450 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:05] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:48:05,463 - INFO - User authenticated: aryan
+2025-01-18 10:48:05,468 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:05] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:48:20,263 - INFO - Sign out endpoint hit!
+2025-01-18 10:48:20,264 - INFO - Email and username removed from session
+2025-01-18 10:48:20,270 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:20] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:48:20,300 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:20] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:48:20,351 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:20] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:48:20,352 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:20] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:48:34,951 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:34] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:48:34,988 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:34] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:48:34,989 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:34] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:48:44,274 - INFO - Hashed password: $2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu
+2025-01-18 10:48:44,275 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 10:48:45,049 - INFO - Supabase API response: 201
+2025-01-18 10:48:45,051 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:45] "POST /signup HTTP/1.1" 200 -
+2025-01-18 10:48:49,767 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 10:48:50,231 - INFO - Supabase API response: 200
+2025-01-18 10:48:50,231 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 10:48:50,884 - INFO - Signin successful for user: karam
+2025-01-18 10:48:50,893 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:50] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:48:51,952 - INFO - Rendering bank form for user: karam
+2025-01-18 10:48:51,961 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:51] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:48:52,032 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:52] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:48:52,033 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:52] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:48:52,058 - INFO - User authenticated: karam
+2025-01-18 10:48:52,063 - INFO - 127.0.0.1 - - [18/Jan/2025 10:48:52] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:58:40,532 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:58:40,586 - INFO -  * Restarting with stat
+2025-01-18 10:58:41,182 - WARNING -  * Debugger is active!
+2025-01-18 10:58:41,190 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:58:43,362 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:58:43,413 - INFO -  * Restarting with stat
+2025-01-18 10:58:44,054 - WARNING -  * Debugger is active!
+2025-01-18 10:58:44,061 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:58:50,410 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 10:58:50,466 - INFO -  * Restarting with stat
+2025-01-18 10:58:51,064 - WARNING -  * Debugger is active!
+2025-01-18 10:58:51,071 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:59:20,723 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 10:59:20,723 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 10:59:20,725 - INFO -  * Restarting with stat
+2025-01-18 10:59:21,326 - WARNING -  * Debugger is active!
+2025-01-18 10:59:21,332 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 10:59:22,554 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 10:59:22,589 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:22] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:59:22,719 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:22] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:59:22,720 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:22] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:59:47,263 - INFO - Supabase query: {'email': 'eq.karan@gmail.com'}
+2025-01-18 10:59:47,264 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.karan@gmail.com"}
+2025-01-18 10:59:48,061 - INFO - Supabase API response: 200
+2025-01-18 10:59:48,062 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 10:59:48,064 - WARNING - Email mismatch: Expected karan@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 10:59:48,069 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:48] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 10:59:54,304 - INFO - Supabase query: {'email': 'eq.aryanjathar0723@gmail.com'}
+2025-01-18 10:59:54,306 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.aryanjathar0723@gmail.com"}
+2025-01-18 10:59:54,576 - INFO - Supabase API response: 200
+2025-01-18 10:59:54,578 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 10:59:54,959 - INFO - Signin successful for user: karam
+2025-01-18 10:59:54,962 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:54] "POST /signin HTTP/1.1" 200 -
+2025-01-18 10:59:56,021 - INFO - Rendering bank form for user: karam
+2025-01-18 10:59:56,031 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:56] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 10:59:56,088 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:56] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 10:59:56,090 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:56] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:59:56,102 - INFO - User authenticated: karam
+2025-01-18 10:59:56,106 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:56] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 10:59:57,108 - INFO - Sign out endpoint hit!
+2025-01-18 10:59:57,109 - INFO - Email and username removed from session
+2025-01-18 10:59:57,112 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:57] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 10:59:57,139 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:57] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 10:59:57,182 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:57] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 10:59:57,183 - INFO - 127.0.0.1 - - [18/Jan/2025 10:59:57] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:41:18,594 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 11:41:18,594 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 11:41:18,596 - INFO -  * Restarting with stat
+2025-01-18 11:41:19,204 - WARNING -  * Debugger is active!
+2025-01-18 11:41:19,211 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 11:41:21,343 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 11:41:21,356 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:21] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 11:41:21,469 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:21] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:41:21,470 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:21] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:41:23,397 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:23] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 11:41:23,405 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:23] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 11:41:23,430 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:23] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:41:23,432 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:23] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:41:35,958 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:41:35,959 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:41:36,642 - INFO - Supabase API response: 200
+2025-01-18 11:41:36,644 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:41:36,645 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:41:36,646 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:36] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:41:56,115 - INFO - Hashed password: $2b$12$JeNOjy8PYjY30TM1JuqyP.Az9nap3qmnBh2U/PCMqYJMHKoRcXdAm
+2025-01-18 11:41:56,116 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 11:41:56,781 - INFO - Supabase API response: 201
+2025-01-18 11:41:56,782 - INFO - 127.0.0.1 - - [18/Jan/2025 11:41:56] "POST /signup HTTP/1.1" 200 -
+2025-01-18 11:41:59,795 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:41:59,796 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:42:00,202 - INFO - Supabase API response: 200
+2025-01-18 11:42:00,204 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:42:00,205 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:42:00,206 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:00] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:42:07,979 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:42:07,980 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:42:09,100 - INFO - Supabase API response: 200
+2025-01-18 11:42:09,102 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:42:09,102 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:42:09,103 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:09] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:42:16,130 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:42:16,131 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:42:16,468 - INFO - Supabase API response: 200
+2025-01-18 11:42:16,471 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:42:16,472 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:42:16,473 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:16] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:42:18,184 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:18] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 11:42:18,222 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:18] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:42:18,224 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:18] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:42:27,068 - INFO - Hashed password: $2b$12$q/XgvkIeJJqufuM2XwsEne4/8KKw/2NAkp/fCnsV4VJumywBx5JqS
+2025-01-18 11:42:27,069 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 11:42:27,839 - ERROR - Supabase API request failed: 409 Client Error: Conflict for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 11:42:27,840 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:27] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+2025-01-18 11:42:41,157 - INFO - Hashed password: $2b$12$Ln3cCKeETYWVXL.qse1R2eGkyrPn0vzgxfy3bj/0iaJ3z4sPZ4X1K
+2025-01-18 11:42:41,158 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 11:42:41,936 - INFO - Supabase API response: 201
+2025-01-18 11:42:41,938 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:41] "POST /signup HTTP/1.1" 200 -
+2025-01-18 11:42:51,598 - INFO - Supabase query: {'email': 'eq.test12@gmail.com'}
+2025-01-18 11:42:51,599 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test12@gmail.com"}
+2025-01-18 11:42:52,108 - INFO - Supabase API response: 200
+2025-01-18 11:42:52,109 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:42:52,110 - WARNING - Email mismatch: Expected test12@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:42:52,112 - INFO - 127.0.0.1 - - [18/Jan/2025 11:42:52] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:43:12,644 - INFO - Supabase query: {'email': 'eq.test12@gmail.com'}
+2025-01-18 11:43:12,645 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test12@gmail.com"}
+2025-01-18 11:43:13,311 - INFO - Supabase API response: 200
+2025-01-18 11:43:13,312 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:43:13,313 - WARNING - Email mismatch: Expected test12@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:43:13,315 - INFO - 127.0.0.1 - - [18/Jan/2025 11:43:13] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:43:16,061 - INFO - 127.0.0.1 - - [18/Jan/2025 11:43:16] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:49:25,759 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 11:49:25,760 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 11:49:25,762 - INFO -  * Restarting with stat
+2025-01-18 11:49:26,191 - WARNING -  * Debugger is active!
+2025-01-18 11:49:26,195 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 11:49:27,496 - INFO - 127.0.0.1 - - [18/Jan/2025 11:49:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 11:49:27,516 - INFO - 127.0.0.1 - - [18/Jan/2025 11:49:27] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 11:49:27,609 - INFO - 127.0.0.1 - - [18/Jan/2025 11:49:27] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:49:27,638 - INFO - 127.0.0.1 - - [18/Jan/2025 11:49:27] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:49:31,811 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:49:31,811 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:49:32,881 - INFO - Supabase API response: 200
+2025-01-18 11:49:32,883 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:49:32,883 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:49:32,884 - INFO - 127.0.0.1 - - [18/Jan/2025 11:49:32] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 11:55:12,998 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 11:55:13,036 - INFO -  * Restarting with stat
+2025-01-18 11:57:54,328 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 11:57:54,328 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 11:57:54,330 - INFO -  * Restarting with stat
+2025-01-18 11:57:54,755 - WARNING -  * Debugger is active!
+2025-01-18 11:57:54,759 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 11:57:56,135 - INFO - 127.0.0.1 - - [18/Jan/2025 11:57:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 11:57:56,150 - INFO - 127.0.0.1 - - [18/Jan/2025 11:57:56] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 11:57:56,253 - INFO - 127.0.0.1 - - [18/Jan/2025 11:57:56] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 11:57:56,254 - INFO - 127.0.0.1 - - [18/Jan/2025 11:57:56] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 11:58:05,427 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 11:58:05,428 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 11:58:06,278 - INFO - Supabase API response: 200
+2025-01-18 11:58:06,279 - INFO - User found: {'id': 'fa47dfc8-fc4c-4944-b764-0fa118eb1e99', 'username': 'karam', 'email': 'aryanjathar0723@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 11:58:06,280 - WARNING - Email mismatch: Expected test@gmail.com, found aryanjathar0723@gmail.com
+2025-01-18 11:58:06,281 - INFO - 127.0.0.1 - - [18/Jan/2025 11:58:06] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:30:43,743 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 12:30:43,743 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 12:30:43,745 - INFO -  * Restarting with stat
+2025-01-18 12:30:44,191 - WARNING -  * Debugger is active!
+2025-01-18 12:30:44,196 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:30:45,235 - INFO - 127.0.0.1 - - [18/Jan/2025 12:30:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 12:30:45,245 - INFO - 127.0.0.1 - - [18/Jan/2025 12:30:45] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:30:45,323 - INFO - 127.0.0.1 - - [18/Jan/2025 12:30:45] "GET /static/auth_style.css HTTP/1.1" 200 -
+2025-01-18 12:30:45,324 - INFO - 127.0.0.1 - - [18/Jan/2025 12:30:45] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 12:30:49,876 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:30:49,877 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:30:50,548 - INFO - Supabase API response: 200
+2025-01-18 12:30:50,550 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:30:50,551 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:30:50,552 - INFO - 127.0.0.1 - - [18/Jan/2025 12:30:50] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:31:02,224 - INFO - Hashed password: $2b$12$M0hrR1okWwOkHVcV61gbk.shfK7aYmbI7YgQnBztQIgDbp208N63y
+2025-01-18 12:31:02,225 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:31:02,501 - INFO - Supabase API response: 201
+2025-01-18 12:31:02,502 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:02] "POST /signup HTTP/1.1" 200 -
+2025-01-18 12:31:05,047 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:31:05,047 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:31:05,503 - INFO - Supabase API response: 200
+2025-01-18 12:31:05,504 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:31:05,505 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:31:05,506 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:05] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:31:08,736 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:08] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:31:12,317 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:12] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:31:12,345 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:12] "GET /static/auth_style.css HTTP/1.1" 200 -
+2025-01-18 12:31:12,346 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:12] "GET /static/auth_script.js HTTP/1.1" 200 -
+2025-01-18 12:31:21,251 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:31:21,252 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:31:21,489 - INFO - Supabase API response: 200
+2025-01-18 12:31:21,490 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:31:21,490 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:31:21,491 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:21] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:31:33,721 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:31:33,721 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:31:33,955 - INFO - Supabase API response: 200
+2025-01-18 12:31:33,956 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:31:33,957 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:31:33,958 - INFO - 127.0.0.1 - - [18/Jan/2025 12:31:33] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:35:26,511 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 12:35:26,511 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 12:35:26,513 - INFO -  * Restarting with stat
+2025-01-18 12:35:26,936 - WARNING -  * Debugger is active!
+2025-01-18 12:35:26,942 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:35:27,488 - INFO - 127.0.0.1 - - [18/Jan/2025 12:35:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 12:35:27,498 - INFO - 127.0.0.1 - - [18/Jan/2025 12:35:27] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:35:27,582 - INFO - 127.0.0.1 - - [18/Jan/2025 12:35:27] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:35:27,583 - INFO - 127.0.0.1 - - [18/Jan/2025 12:35:27] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:35:31,493 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:35:31,493 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:35:32,209 - INFO - Supabase API response: 200
+2025-01-18 12:35:32,211 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:35:32,211 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:35:32,213 - INFO - 127.0.0.1 - - [18/Jan/2025 12:35:32] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:41:26,739 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 12:41:26,740 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 12:41:26,741 - INFO -  * Restarting with stat
+2025-01-18 12:41:27,194 - WARNING -  * Debugger is active!
+2025-01-18 12:41:27,199 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:41:29,393 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 12:41:29,401 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:29] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:41:29,482 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:29] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:41:29,483 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:29] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:41:39,028 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:41:39,028 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test@gmail.com"}
+2025-01-18 12:41:39,804 - INFO - Supabase API response: 200
+2025-01-18 12:41:39,805 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:41:39,806 - WARNING - Email mismatch: Expected test@gmail.com, found test2@gmail.com
+2025-01-18 12:41:39,808 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:39] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:41:56,089 - INFO - Hashed password: $2b$12$yQJmlUowuGoCZNdnKfKVo.i5AI17c6mucWukYyEvl.h4fPIrbeOzu
+2025-01-18 12:41:56,090 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:41:56,383 - ERROR - Supabase API request failed: 409 Client Error: Conflict for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:41:56,384 - INFO - 127.0.0.1 - - [18/Jan/2025 12:41:56] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+2025-01-18 12:42:01,519 - INFO - Hashed password: $2b$12$dA4FXl5KIuvo5N2rNmZqQuRXhe5ijhCvf0sV9yf9UEvewfzFeTUne
+2025-01-18 12:42:01,519 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:42:01,946 - INFO - Supabase API response: 201
+2025-01-18 12:42:01,947 - INFO - 127.0.0.1 - - [18/Jan/2025 12:42:01] "POST /signup HTTP/1.1" 200 -
+2025-01-18 12:42:08,483 - INFO - Supabase query: {'email': 'eq.test123@gmail.com'}
+2025-01-18 12:42:08,484 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users?{"email":"eq.test123@gmail.com"}
+2025-01-18 12:42:08,731 - INFO - Supabase API response: 200
+2025-01-18 12:42:08,732 - INFO - User found: {'id': '057552c3-8541-42bd-ac3d-13efe26b1170', 'username': 'karam', 'email': 'test2@gmail.com', 'password': '$2b$12$.OU9aKxpJIOFtCQ1i8RV/e5E1M8UQDA4ZwL7V/yx8.X29yYbMJASu'}
+2025-01-18 12:42:08,733 - WARNING - Email mismatch: Expected test123@gmail.com, found test2@gmail.com
+2025-01-18 12:42:08,734 - INFO - 127.0.0.1 - - [18/Jan/2025 12:42:08] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
+2025-01-18 12:50:19,043 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 12:50:19,044 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 12:50:19,045 - INFO -  * Restarting with stat
+2025-01-18 12:50:19,497 - WARNING -  * Debugger is active!
+2025-01-18 12:50:19,502 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:50:21,901 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 12:50:21,909 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:21] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:50:21,986 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:21] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:50:21,989 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:21] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:50:28,508 - INFO - Supabase query: {'email': 'eq.test@gmail.com'}
+2025-01-18 12:50:28,509 - ERROR - Error during signin: make_supabase_request() got an unexpected keyword argument 'params'
+2025-01-18 12:50:28,509 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:28] "[35m[1mPOST /signin HTTP/1.1[0m" 500 -
+2025-01-18 12:50:57,266 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:50:57,288 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:50:57,290 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:50:57,466 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:50:57,493 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:50:57,494 - INFO - 127.0.0.1 - - [18/Jan/2025 12:50:57] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:51:14,656 - INFO - Hashed password: $2b$12$fzFjqXkM3QrFt2dcHSHt3eSQsrx239jVsX/IZSE1LDF.ERpaHEtye
+2025-01-18 12:51:14,657 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:51:15,337 - INFO - Supabase API response: 201
+2025-01-18 12:51:15,340 - INFO - 127.0.0.1 - - [18/Jan/2025 12:51:15] "POST /signup HTTP/1.1" 200 -
+2025-01-18 12:51:20,099 - INFO - Supabase query: {'email': 'eq.aryan@gmail.com'}
+2025-01-18 12:51:20,100 - ERROR - Error during signin: make_supabase_request() got an unexpected keyword argument 'params'
+2025-01-18 12:51:20,101 - INFO - 127.0.0.1 - - [18/Jan/2025 12:51:20] "[35m[1mPOST /signin HTTP/1.1[0m" 500 -
+2025-01-18 12:51:27,022 - INFO - Supabase query: {'email': 'eq.aryan@gmail.com'}
+2025-01-18 12:51:27,022 - ERROR - Error during signin: make_supabase_request() got an unexpected keyword argument 'params'
+2025-01-18 12:51:27,023 - INFO - 127.0.0.1 - - [18/Jan/2025 12:51:27] "[35m[1mPOST /signin HTTP/1.1[0m" 500 -
+2025-01-18 12:55:14,570 - INFO -  * Detected change in 'D:\\MY\\MOVIES\\FORM FILLING PROJECT\\app.py', reloading
+2025-01-18 12:55:14,610 - INFO -  * Restarting with stat
+2025-01-18 12:55:15,079 - WARNING -  * Debugger is active!
+2025-01-18 12:55:15,084 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:55:20,324 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-18 12:55:20,325 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-18 12:55:20,326 - INFO -  * Restarting with stat
+2025-01-18 12:55:20,759 - WARNING -  * Debugger is active!
+2025-01-18 12:55:20,764 - INFO -  * Debugger PIN: 136-010-039
+2025-01-18 12:55:22,151 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-18 12:55:22,160 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:22] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:55:22,238 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:22] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:55:22,239 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:22] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:55:31,067 - INFO - Hashed password: $2b$12$0B.qmzM383OnHiSYl5Vzde0B8OvatKG2pGVaNUo7g4Gp4EODB1jJy
+2025-01-18 12:55:31,069 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:55:31,971 - ERROR - Supabase API request failed: 409 Client Error: Conflict for url: https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:55:31,973 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:31] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+2025-01-18 12:55:38,130 - INFO - Hashed password: $2b$12$C3osRolGNjdBY1xFhXQRV.R8DthLv6J.L.pO4opJ9rG5KejV2YvjC
+2025-01-18 12:55:38,132 - INFO - Making Supabase API request: POST https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:55:38,443 - INFO - Supabase API response: 201
+2025-01-18 12:55:38,444 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:38] "POST /signup HTTP/1.1" 200 -
+2025-01-18 12:55:43,347 - INFO - Supabase query: {'email': 'eq.aryan@gmail.com'}
+2025-01-18 12:55:43,348 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:55:43,615 - INFO - Supabase API response: 200
+2025-01-18 12:55:43,616 - INFO - User found: {'id': 'ced6fb6b-ff97-4d2f-af1f-3de3f3599c11', 'username': 'aryan', 'email': 'aryan@gmail.com', 'password': '$2b$12$fzFjqXkM3QrFt2dcHSHt3eSQsrx239jVsX/IZSE1LDF.ERpaHEtye'}
+2025-01-18 12:55:44,132 - INFO - Signin successful for user: aryan
+2025-01-18 12:55:44,142 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:44] "POST /signin HTTP/1.1" 200 -
+2025-01-18 12:55:45,200 - INFO - Rendering bank form for user: aryan
+2025-01-18 12:55:45,230 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:45] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 12:55:45,285 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:45] "GET /static/bank_style.css HTTP/1.1" 200 -
+2025-01-18 12:55:45,286 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:45] "GET /static/bank_script.js HTTP/1.1" 200 -
+2025-01-18 12:55:45,359 - INFO - User authenticated: aryan
+2025-01-18 12:55:45,363 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:45] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 12:55:46,396 - INFO - Sign out endpoint hit!
+2025-01-18 12:55:46,397 - INFO - Email and username removed from session
+2025-01-18 12:55:46,404 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:46] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 12:55:46,424 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:46] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:55:46,460 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:46] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:55:46,462 - INFO - 127.0.0.1 - - [18/Jan/2025 12:55:46] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:56:04,354 - INFO - Supabase query: {'email': 'eq.jathar@gmail.com'}
+2025-01-18 12:56:04,355 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:56:04,738 - INFO - Supabase API response: 200
+2025-01-18 12:56:04,740 - INFO - User found: {'id': '20b49fec-cffb-4ce4-adac-92321dd6fcff', 'username': 'aryan', 'email': 'jathar@gmail.com', 'password': '$2b$12$C3osRolGNjdBY1xFhXQRV.R8DthLv6J.L.pO4opJ9rG5KejV2YvjC'}
+2025-01-18 12:56:05,211 - INFO - Signin successful for user: aryan
+2025-01-18 12:56:05,226 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:05] "POST /signin HTTP/1.1" 200 -
+2025-01-18 12:56:06,269 - INFO - Rendering bank form for user: aryan
+2025-01-18 12:56:06,287 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:06] "GET /bankform/bank_form.html HTTP/1.1" 200 -
+2025-01-18 12:56:06,351 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:06] "[36mGET /static/bank_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:56:06,351 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:06] "[36mGET /static/bank_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:56:06,375 - INFO - User authenticated: aryan
+2025-01-18 12:56:06,379 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:06] "GET /check-auth HTTP/1.1" 200 -
+2025-01-18 12:56:10,427 - INFO - Sign out endpoint hit!
+2025-01-18 12:56:10,428 - INFO - Email and username removed from session
+2025-01-18 12:56:10,432 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:10] "POST /sign-out HTTP/1.1" 200 -
+2025-01-18 12:56:10,455 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:10] "GET /auth/auth_form.html HTTP/1.1" 200 -
+2025-01-18 12:56:10,497 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:10] "[36mGET /static/auth_style.css HTTP/1.1[0m" 304 -
+2025-01-18 12:56:10,498 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:10] "[36mGET /static/auth_script.js HTTP/1.1[0m" 304 -
+2025-01-18 12:56:35,691 - INFO - Supabase query: {'email': 'eq.karna@gmail.com'}
+2025-01-18 12:56:35,692 - INFO - Making Supabase API request: GET https://dhstwzjyrfbhwrzsxgek.supabase.co/rest/v1/users
+2025-01-18 12:56:36,194 - INFO - Supabase API response: 200
+2025-01-18 12:56:36,196 - WARNING - User not found for email: karna@gmail.com
+2025-01-18 12:56:36,197 - INFO - 127.0.0.1 - - [18/Jan/2025 12:56:36] "[31m[1mPOST /signin HTTP/1.1[0m" 401 -
