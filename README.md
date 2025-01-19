@@ -46,6 +46,7 @@ Follow these instructions to run the application locally on your development mac
 
     ```bash
     python3 -m venv venv
+    python -m venv venv(add any name)
     source venv/bin/activate  # On macOS/Linux
     venv\Scripts\activate # On Windows
     ```
