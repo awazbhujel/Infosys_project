@@ -56,6 +56,12 @@ Follow these instructions to run the application locally on your development mac
 
     ```bash
     pip install -r requirements.txt
+    pip install python-dotenv
+    pip install bcrypt
+    pip install requests
+    pip  install flask-session
+    pip install flask
+    
     ```
 
 4.  **Create a `.env` File:**
