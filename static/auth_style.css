@@ -526,42 +526,154 @@ input:checked + .slider:before {
   z-index: 1;
   font-size: 14px;
 }
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;
-    gap: 30px;
-  }
-
-  .app-title {
-    font-size: 2em;
-  }
-
-  .form-container {
-    padding: 25px 30px;
-  }
+/* General Responsive Fixes */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Small Devices (up to 480px) */
 @media (max-width: 480px) {
   body {
-    gap: 25px;
+      gap: 20px; /* Adjust spacing */
   }
 
-  .app-title {
-    font-size: 1.8em;
+  .container {
+      width: 100%; /* Full width */
+      margin: 10px auto; /* Reduce margins */
   }
 
   .form-container {
-    padding: 20px;
+      padding: 15px; /* Reduce padding */
+  }
+
+  .app-title {
+      font-size: 1.5em; /* Smaller font size */
+      line-height: 1.2; /* Adjust line height */
   }
 
   input[type="text"],
   input[type="email"],
   input[type="password"] {
-    padding: 10px 14px;
+      font-size: 14px; /* Adjust font size */
+      padding: 8px 12px; /* Adjust padding */
+  }
+
+  button {
+      padding: 10px 12px; /* Smaller button size */
+  }
+
+  .header-title {
+      font-size: 1.8em; /* Smaller header title */
+  }
+
+  .header-subtitle {
+      font-size: 0.9em; /* Adjust subtitle size */
+  }
+
+  .footer-content {
+      font-size: 0.8em; /* Smaller footer text */
   }
 }
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Center the container and add padding */
+  .container {
+      width: 90%; /* Slightly smaller than full width */
+      max-width: 400px; /* Ensure it doesn't grow too large */
+      margin: 0 auto; /* Center horizontally */
+      padding: 15px 10px; /* Add padding for better spacing */
+  }
+
+  .form-container {
+      padding: 20px; /* Add padding inside the form */
+      box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  /* Ensure footer text fits and remains visible */
+  .form-footer {
+      margin-top: 10px; /* Add space above footer */
+      text-align: center; /* Center the footer text */
+      font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+
+  /* Ensure copyright text is visible */
+  .copyright {
+      margin-top: 10px; /* Add space above the copyright */
+      text-align: center; /* Center the text */
+      font-size: 0.8em; /* Slightly smaller font for mobile */
+  }
+
+  /* Input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+      font-size: 14px;
+      padding: 8px 10px;
+  }
+
+  /* Keep button in its original position and style */
+  button {
+      padding: 10px 12px; /* Smaller padding for the button */
+      width: 100%; /* Ensure the button takes up full width of the container */
+      margin-top: 10px; /* Add space above button */
+  }
+
+  /* Add scrolling if necessary */
+  body, html {
+      height: 100%; /* Ensure full height */
+      overflow-y: auto; /* Allow scrolling if content exceeds height */
+  }
+
+  /* Adjust header spacing and slider position */
+  .theme-switch-wrapper {
+      position: absolute;
+      top: 10px; /* Adjust position to avoid overlapping */
+      right: 10px; /* Keep it aligned to the right */
+  }
+
+  .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center-align header content */
+      text-align: center;
+      padding-top: 30px; /* Add space above the header */
+  }
+
+  .header-title {
+      font-size: 1.5em; /* Adjust header size */
+  }
+
+  .header-subtitle {
+      font-size: 0.9em; /* Adjust subtitle size */
+  }
+
+  /* Ensure sign-in/sign-up box fits within screen */
+  .container {
+      width: 100%; /* Full width */
+      margin: 0 auto; /* Center align */
+      padding: 10px;
+  }
+
+  .form-container {
+      padding: 15px; /* Reduce padding */
+      max-height: calc(100vh - 100px); /* Ensure it fits within the viewport */
+      overflow-y: auto; /* Add scrolling for long forms */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+      font-size: 14px; /* Adjust font size for inputs */
+      padding: 8px 12px; /* Adjust padding */
+  }
+
+  button {
+      padding: 10px 12px; /* Smaller button size */
+  }
+}
+
+
 
 /* mic icon */
 .voice-icon {
