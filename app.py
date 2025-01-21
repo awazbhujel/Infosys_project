@@ -1,13 +1,18 @@
-import email
+import io
+import os
+import logging
+import bcrypt
+import requests
+import json
+from datetime import datetime, timedelta
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_session import Session
-import os
-import requests
+from flask_mail import Mail, Message
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
-import bcrypt
-import json
-import logging
+from reportlab.lib.pagesizes import letter
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, KeepTogether
 
 # Load environment variables
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '.env'))
@@ -20,6 +25,17 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)  # Reduced session
 app.config['SESSION_COOKIE_SECURE'] = True  # Only send cookies over HTTPS
 app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevent client-side script access
 Session(app)
+
+# Flask-Mail Configuration
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')  # e.g., 'smtp.gmail.com'
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))  # Default is 587 for TLS
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')  # Your email
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')  # Your email password or app password
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER', 'noreply@example.com')
+
+mail = Mail(app)
 
 # Configure logging
 logging.basicConfig(
@@ -79,14 +95,19 @@ def transform_payload(data):
         "firstName": "firstname",
         "middleName": "middlename",  # Ensure middlename is included
         "lastName": "lastname",
+        "dob": "dob",
+        "gender": "gender",
         "maritalStatus": "maritalstatus",
+        "nationality": "nationality",
         "mothersMaidenName": "mothersmaidenname",
         "residentialStreet": "residentialstreet",
         "residentialCity": "residentialcity",
         "residentialState": "residentialstate",
         "residentialZip": "residentialzip",
         "mobilePhone": "mobilephone",
+        "email": "email",
         "employmentStatus": "employmentstatus",
+        "occupation": "occupation",
         "monthlyIncome": "monthlyincome",
         "incomeSource": "incomesource",
         "accountType": "accounttype",
@@ -110,6 +131,167 @@ def transform_payload(data):
 
     return transformed_data
 
+def generate_pdf(form_data):
+    """
+    Generate a PDF that looks like the online form, with boxes and filled-in data.
+    """
+    # Create a buffer to hold the PDF
+    pdf_buffer = io.BytesIO()
+
+    # Create a PDF document
+    doc = SimpleDocTemplate(pdf_buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+
+    # Content for the PDF
+    content = []
+
+    # Add a title
+    title = Paragraph("<b>Bank Account Application Form</b>", styles['Title'])
+    content.append(title)
+    content.append(Spacer(1, 12))  # Add some space
+
+    # Section 1: Personal Information
+    personal_info = [
+        ["Personal Information", ""],
+        ["First Name:", form_data.get('firstname', '')],
+        ["Middle Name:", form_data.get('middlename', '')],
+        ["Last Name:", form_data.get('lastname', '')],
+        ["Date of Birth:", form_data.get('dob', '')],
+        ["Gender:", form_data.get('gender', '')],
+        ["Marital Status:", form_data.get('maritalstatus', '')],
+        ["Nationality:", form_data.get('nationality', '')],
+        ["Mother's Maiden Name:", form_data.get('mothersmaidenname', '')],
+        ["Residential Address:", f"{form_data.get('residentialstreet', '')}, {form_data.get('residentialcity', '')}, {form_data.get('residentialstate', '')} - {form_data.get('residentialzip', '')}"],
+        ["Mobile Phone:", form_data.get('mobilephone', '')],
+        ["Email Address:", form_data.get('email', '')],
+    ]
+
+    # Create a table for personal information
+    personal_table = Table(personal_info, colWidths=[150, 350])
+    personal_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ]))
+
+    content.append(KeepTogether(personal_table))
+    content.append(Spacer(1, 24))  # Add space between sections
+
+    # Section 2: Employment and Income Information
+    employment_info = [
+        ["Employment and Income Information", ""],
+        ["Employment Status:", form_data.get('employmentstatus', '')],
+        ["Occupation:", form_data.get('occupation', '')],
+        ["Monthly Income:", f"₹{form_data.get('monthlyincome', '')}"],
+        ["Source of Income:", form_data.get('incomesource', '')]
+    ]
+
+    # Create a table for employment information
+    employment_table = Table(employment_info, colWidths=[150, 350])
+    employment_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('WORDWRAP', (0, 0), (-1, -1), True),  # Enable text wrapping
+        ('ROWHEIGHT', (0, 0), (-1, 0), 24),  # Increase row height for the header
+    ]))
+
+    content.append(KeepTogether(employment_table))
+    content.append(Spacer(1, 24))  # Add space between sections
+
+    # Section 3: Account Details
+    account_info = [
+        ["Account Details", ""],
+        ["Account Type:", form_data.get('accounttype', '')],
+        ["Initial Deposit Amount:", f"₹{form_data.get('initialdeposit', '')}"],
+        ["Account Purpose:", form_data.get('accountpurpose', '')],
+        ["Mode of Operation:", form_data.get('modeofoperation', '')],
+    ]
+
+    # Create a table for account details
+    account_table = Table(account_info, colWidths=[150, 350])
+    account_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ]))
+
+    content.append(KeepTogether(account_table))
+    content.append(Spacer(1, 24))  # Add space between sections
+
+    # Section 4: Nominee Information
+    nominee_info = [
+        ["Nominee Information", ""],
+        ["Nominee Name:", form_data.get('nomineename', '')],
+        ["Nominee Relationship:", form_data.get('nomineerelationship', '')],
+        ["Nominee Contact:", form_data.get('nomineecontact', '')],
+    ]
+
+    # Create a table for nominee information
+    nominee_table = Table(nominee_info, colWidths=[150, 350])
+    nominee_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ]))
+
+    content.append(KeepTogether(nominee_table))
+
+    # Build the PDF
+    doc.build(content)
+
+    # Return the PDF buffer
+    pdf_buffer.seek(0)
+    return pdf_buffer
+
+def send_pdf_email(pdf_data, recipient_email):
+    """
+    Send an email with the generated PDF attached.
+    """
+    try:
+        msg = Message(
+            subject='Bank Form Submission',  # Email subject
+            sender=app.config['MAIL_DEFAULT_SENDER'],  # Sender email
+            recipients=[recipient_email]  # Recipient email(s)
+        )
+
+        # Attach the PDF file
+        pdf_data.seek(0)  # Ensure the file pointer is at the beginning
+        msg.attach(
+            filename="bank_form.pdf",
+            content_type="application/pdf",
+            data=pdf_data.read()
+        )
+
+        # Send the email using Flask-Mail
+        mail.send(msg)
+        
+        logging.info(f"PDF sent successfully to {recipient_email}")
+        return True
+    except Exception as e:
+        logging.error(f"Failed to send email: {e}")
+        return False
+
 @app.route('/')
 def index():
     return redirect(url_for('auth_form'))
@@ -128,7 +310,6 @@ def signup():
     try:
         # Hash the password using bcrypt
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-        logging.info(f"Hashed password: {hashed_password.decode('utf-8')}")  # Log the hashed password
 
         # Insert new user
         payload = {
@@ -157,7 +338,6 @@ def signin():
     try:
         # Retrieve the user based on email
         query = {"email": f"eq.{email}"}
-        logging.info(f"Supabase query: {query}")
         user_response = make_supabase_request("GET", f"/rest/v1/users", params=query)
 
         # Check if the user exists
@@ -170,12 +350,6 @@ def signin():
             return jsonify({"message": "Invalid email or password"}), 401
 
         user = user_response[0]
-        logging.info(f"User found: {user}")
-
-        # Validate that the email in the response matches the input email
-        if user['email'] != email:
-            logging.warning(f"Email mismatch: Expected {email}, found {user['email']}")
-            return jsonify({"message": "Invalid email or password"}), 401
 
         # Verify the password using bcrypt
         if bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
@@ -189,8 +363,6 @@ def signin():
         else:
             # Password is incorrect
             logging.warning(f"Password verification failed for user: {user['username']}")
-            logging.warning(f"Stored password hash: {user['password']}")
-            logging.warning(f"Provided password: {password}")
             return jsonify({"message": "Invalid email or password"}), 401
 
     except Exception as e:
@@ -236,7 +408,7 @@ def submit_bank_form():
 
     # Parse JSON data from the request
     data = request.json
-    logging.info("Received bank form data: %s", data)
+    logging.info("Received bank form data: %s", data)  # Log the received data
     email = session['email']
 
     try:
@@ -261,7 +433,15 @@ def submit_bank_form():
 
             if response:
                 logging.info("Form data inserted successfully!")
-                return jsonify({"message": "Form submission successful"}), 200
+
+                # Generate the PDF from the form data
+                pdf_data = generate_pdf(transformed_payload)
+
+                # Send the PDF via email to the user (or another email)
+                if send_pdf_email(pdf_data, user['email']):
+                    return jsonify({"message": "Form submission successful and PDF sent to email"}), 200
+                else:
+                    return jsonify({"message": "Form submission successful, but failed to send email"}), 500
             else:
                 logging.error("Failed to insert form data into Supabase")
                 return jsonify({"message": "Form submission failed"}), 500

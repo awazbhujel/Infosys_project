@@ -310,13 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isSubmitting) return;
         isSubmitting = true;
         submitButton.textContent = 'Submitting...';
-
+    
         if (!validateForm()) {
             submitButton.textContent = 'Submit Application';
             isSubmitting = false;
             return;
         }
-
+    
         const formValues = {};
         for (const fieldName in formSchema) {
             formValues[fieldName] = document.getElementById(fieldName)?.value;
@@ -324,23 +324,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 formValues[fieldName] = formValues[fieldName].trim();
             }
         }
-
+    
+        // Log the form data being sent
+        console.log("Form Data Being Sent:", formValues);
+    
         if (formValues.monthlyIncome) {
             formValues.monthlyIncome = parseFloat(formValues.monthlyIncome);
         }
         if (formValues.initialDeposit) {
             formValues.initialDeposit = parseFloat(formValues.initialDeposit);
         }
-
+    
         try {
             const authResponse = await fetch('/check-auth');
             const authData = await authResponse.json();
-
+    
             if (!authResponse.ok || !authData.isAuthenticated) {
                 window.location.href = '/auth/auth_form.html';
                 return;
             }
-
+    
             const submitResponse = await fetch('/submit-bank-form', {
                 method: 'POST',
                 headers: {
@@ -348,9 +351,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify(formValues),
             });
-
+    
             if (submitResponse.ok) {
-                showToast(`Welcome back ${authData.username}, Your application has been submitted successfully.`, 'success');
+                showToast(`Your application has been submitted successfully.`, 'success');
                 clearForm();
             } else {
                 showToast('Form submission failed. Please try again.', 'error');
@@ -363,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isSubmitting = false;
         }
     });
-
+    
     async function checkAuth() {
         try {
             const response = await fetch('/check-auth');
