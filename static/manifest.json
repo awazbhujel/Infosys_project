@@ -1,0 +1,11 @@
+{
+  "name": "BANK_VOICE_FORM",
+  "theme_color": "#4ecdc4",
+  "background_color": "#f0f4f8",
+  "short_name": "bank_form",
+  "id": "bankform",
+  "description": "This is a bank voice form that can be filled , using voice as input.",
+  "categories": [
+    "finance"
+  ]
+}
