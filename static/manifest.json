@@ -1,11 +1,20 @@
 {
-  "name": "BANK_VOICE_FORM",
-  "theme_color": "#4ecdc4",
-  "background_color": "#f0f4f8",
-  "short_name": "bank_form",
-  "id": "bankform",
-  "description": "This is a bank voice form that can be filled , using voice as input.",
-  "categories": [
-    "finance"
-  ]
+  "name": "Voice-Enabled Bank Form",
+  "short_name": "BankForm",
+  "start_url": "/auth/auth_form.html",
+   "display": "standalone",
+   "background_color": "#f0f4f8",
+    "theme_color": "#4ecdc4",
+    "icons": [
+        {
+           "src": "/static/icon.png",
+          "sizes": "192x192",
+           "type": "image/png"
+       },
+      {
+          "src": "/static/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+   ]
 }
