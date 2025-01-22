@@ -189,6 +189,19 @@ function clearInput(inputId, errorId) {
 
 // Initialize event listeners
 document.addEventListener('DOMContentLoaded', () => {
+    
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+           navigator.serviceWorker.register('/static/service-worker.js')
+                .then(registration => {
+                  console.log('Service worker registered:', registration);
+                  })
+               .catch(registrationError => {
+                   console.log('Service worker registration failed:', registrationError);
+               });
+         });
+       }
+
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
