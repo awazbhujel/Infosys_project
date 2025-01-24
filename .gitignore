@@ -8,9 +8,7 @@
 flask_session/
 
 # Logs
-*.log
 app.log
-error.log
 
 # Environment Variables
 .env
@@ -19,21 +17,6 @@ error.log
 *.pyc
 *.pyo
 __pycache__/
-
-# OS generated files
-*.DS_Store
-Thumbs.db
-
-# IDE specific files
-.idea/
-
-# Database files
-*.sqlite
-*.db
-
-# NodeJS and NPM
-node_modules/
-package-lock.json
 
 # Package files
 *.whl
