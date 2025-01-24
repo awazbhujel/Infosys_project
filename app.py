@@ -4,7 +4,8 @@ import logging
 import bcrypt
 import requests
 import json
-from datetime import datetime, timedelta
+import uuid
+from datetime import datetime, timedelta, timezone
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_session import Session
 from flask_mail import Mail, Message
@@ -86,6 +87,28 @@ def make_supabase_request(method, path, data=None, params=None):
     except Exception as e:
         logging.error(f"Unexpected error during Supabase API request: {e}")
         return None
+
+def validate_email(email):
+    """
+    Validate email format and enforce allowed domains.
+    """
+    allowed_domains = [
+        'gmail.com',
+        'yahoo.com',
+        'outlook.com',
+        'hotmail.com',
+        'aol.com',
+        'icloud.com'
+    ]
+
+    import re
+    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+
+    if not re.match(pattern, email):
+        return False
+
+    domain = email.split('@')[1]
+    return domain in allowed_domains
 
 def transform_payload(data):
     """
@@ -308,6 +331,22 @@ def signup():
     password = data.get('password')
 
     try:
+        # Check if the username already exists
+        username_query = {"username": f"eq.{username}"}
+        username_response = make_supabase_request("GET", "/rest/v1/users", params=username_query)
+
+        if isinstance(username_response, list) and len(username_response) > 0:
+            # Username already exists
+            return jsonify({"message": "Username already taken. Please choose a different username."}), 400
+
+        # Check if the email already exists
+        email_query = {"email": f"eq.{email}"}
+        email_response = make_supabase_request("GET", "/rest/v1/users", params=email_query)
+
+        if isinstance(email_response, list) and len(email_response) > 0:
+            # Email already exists
+            return jsonify({"message": "Email already registered. Please use a different email."}), 400
+
         # Hash the password using bcrypt
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
@@ -338,6 +377,7 @@ def signin():
     try:
         # Retrieve the user based on email
         query = {"email": f"eq.{email}"}
+        logging.debug(f"Supabase Query: {query}")
         user_response = make_supabase_request("GET", f"/rest/v1/users", params=query)
 
         # Check if the user exists
@@ -349,7 +389,9 @@ def signin():
             logging.warning(f"User not found for email: {email}")
             return jsonify({"message": "Invalid email or password"}), 401
 
+        logging.debug(f"Supabase Response: {user_response}")
         user = user_response[0]
+        logging.debug(f"User data: {user}")
 
         # Verify the password using bcrypt
         if bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
@@ -368,7 +410,174 @@ def signin():
     except Exception as e:
         logging.error(f"Error during signin: {e}")
         return jsonify({"message": "Signin failed"}), 500
-    
+
+@app.route('/forgot-password', methods=['POST'])
+def forgot_password():
+    data = request.json
+    email = data.get('email')
+
+    try:
+        # Validate email format and domain
+        if not validate_email(email):
+            return jsonify({"message": "Invalid email format or domain. Only gmail.com, yahoo.com, outlook.com, hotmail.com, aol.com, and icloud.com domains are allowed."}), 400
+
+        # Check if the email exists in the database
+        query = {"email": f"eq.{email}"}
+        user_response = make_supabase_request("GET", "/rest/v1/users", params=query)
+
+        if not isinstance(user_response, list) or len(user_response) == 0:
+            logging.warning(f"Password reset requested for non-existent email: {email}")
+            # Return a generic success message to avoid revealing whether the email exists
+            return jsonify({"message": "If the email exists, you will receive a password reset link."}), 200
+
+        user = user_response[0]
+
+        # Generate a unique reset token
+        reset_token = str(uuid.uuid4())
+        reset_token_expiry = datetime.utcnow() + timedelta(hours=1)  # Token expires in 1 hour
+
+        # Store the reset token and expiry in the database
+        update_payload = {
+            "reset_token": reset_token,
+            "reset_token_expiry": reset_token_expiry.isoformat(),
+        }
+        make_supabase_request("PATCH", f"/rest/v1/users?id=eq.{user['id']}", data=update_payload)
+
+        # Send the password reset email
+        reset_link = f"{request.url_root}reset-password?token={reset_token}"
+        msg = Message(
+            subject="Password Reset Request",
+            sender=app.config['MAIL_DEFAULT_SENDER'],
+            recipients=[email],
+        )
+        msg.body = f"Click the link below to reset your password:\n\n{reset_link}\n\nThis link will expire in 1 hour."
+
+        try:
+            mail.send(msg)
+            logging.info(f"Password reset email sent to {email}")
+        except Exception as e:
+            logging.error(f"Failed to send password reset email: {e}")
+            return jsonify({"message": "Failed to send password reset email. Please try again later."}), 500
+
+        return jsonify({"message": "If the email exists, you will receive a password reset link."}), 200
+
+    except Exception as e:
+        logging.error(f"Error during forgot password: {e}")
+        return jsonify({"message": "Failed to process your request. Please try again later."}), 500
+
+@app.route('/reset-password', methods=['GET', 'POST'])
+def reset_password():
+    if request.method == 'GET':
+        # Handle GET request (render the reset password form)
+        reset_token = request.args.get('token')
+        if not reset_token:
+            return jsonify({"message": "Invalid reset link."}), 400
+
+        # Check if the reset token is still valid
+        query = {"reset_token": f"eq.{reset_token}"}
+        user_response = make_supabase_request("GET", "/rest/v1/users", params=query)
+
+        if not isinstance(user_response, list) or len(user_response) == 0:
+            logging.error(f"Invalid or expired reset token: {reset_token}")
+            return jsonify({"message": "Invalid or expired reset token."}), 400
+
+        user = user_response[0]
+
+        # Check if reset_token_expiry exists and is not None
+        if not user.get('reset_token_expiry'):
+            logging.error(f"Reset token expiry not found for user: {user['email']}")
+            return jsonify({"message": "Invalid or expired reset token."}), 400
+
+        reset_token_expiry_str = user['reset_token_expiry']
+
+        # Fix the date string by truncating fractional seconds to 6 digits
+        if '.' in reset_token_expiry_str:
+            date_part, time_part = reset_token_expiry_str.split('.')
+            time_part = time_part.split('+')[0]  # Remove timezone if present
+            time_part = time_part[:6]  # Truncate to 6 digits
+            reset_token_expiry_str = f"{date_part}.{time_part}+00:00"  # Reconstruct the date string
+
+        # Parse the fixed date string
+        reset_token_expiry = datetime.fromisoformat(reset_token_expiry_str)
+
+        # Make datetime.utcnow() timezone-aware
+        current_time = datetime.utcnow().replace(tzinfo=timezone.utc)
+
+        # Check if the reset token has expired
+        if current_time > reset_token_expiry:
+            logging.error(f"Reset token expired: {reset_token}")
+            make_supabase_request("PATCH", f"/rest/v1/users?id=eq.{user['id']}", data={"reset_token": None, "reset_token_expiry": None})
+            return jsonify({"message": "Reset token has expired. Please request a new one."}), 400
+
+        return render_template('reset_password.html', token=reset_token)
+    elif request.method == 'POST':
+        # Handle POST request (process the password reset)
+        data = request.json
+        reset_token = data.get('token')
+        new_password = data.get('newPassword')
+
+        # Do not log the password
+        logging.info(f"Reset password request received. Token: {reset_token}")
+
+        # Validate the new password length
+        if len(new_password) != 6:
+            logging.error(f"Invalid password length: {len(new_password)}")
+            return jsonify({"message": "Password must be exactly 6 characters long."}), 400
+        
+        try:
+            # Retrieve the user based on the reset token
+            query = {"reset_token": f"eq.{reset_token}"}
+            user_response = make_supabase_request("GET", "/rest/v1/users", params=query)
+
+            if not isinstance(user_response, list) or len(user_response) == 0:
+                logging.error(f"Invalid or expired reset token: {reset_token}")
+                return jsonify({"message": "Invalid or expired reset token."}), 400
+
+            user = user_response[0]
+
+            # Check if reset_token_expiry exists and is not None
+            if not user.get('reset_token_expiry'):
+                logging.error(f"Reset token expiry not found for user: {user['email']}")
+                return jsonify({"message": "Invalid or expired reset token."}), 400
+
+            reset_token_expiry_str = user['reset_token_expiry']
+
+            # Fix the date string by truncating fractional seconds to 6 digits
+            if '.' in reset_token_expiry_str:
+                date_part, time_part = reset_token_expiry_str.split('.')
+                time_part = time_part.split('+')[0]  # Remove timezone if present
+                time_part = time_part[:6]  # Truncate to 6 digits
+                reset_token_expiry_str = f"{date_part}.{time_part}+00:00"  # Reconstruct the date string
+
+            # Parse the fixed date string
+            reset_token_expiry = datetime.fromisoformat(reset_token_expiry_str)
+
+            # Make datetime.utcnow() timezone-aware
+            current_time = datetime.utcnow().replace(tzinfo=timezone.utc)
+
+            # Check if the reset token has expired
+            if current_time > reset_token_expiry:
+                logging.error(f"Reset token expired: {reset_token}")
+                make_supabase_request("PATCH", f"/rest/v1/users?id=eq.{user['id']}", data={"reset_token": None, "reset_token_expiry": None})
+                return jsonify({"message": "Reset token has expired. Please request a new one."}), 400
+
+            # Hash the new password
+            hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())
+
+            # Update the user's password and clear the reset token
+            update_payload = {
+                "password": hashed_password.decode('utf-8'),
+                "reset_token": None,
+                "reset_token_expiry": None,
+            }
+            make_supabase_request("PATCH", f"/rest/v1/users?id=eq.{user['id']}", data=update_payload)
+            logging.info(f"Password reset successful for user: {user['email']}")
+            return jsonify({"message": "Password reset successful. You can now log in with your new password."}), 200
+        except Exception as e:
+            logging.error(f"Error during password reset: {e}")
+            return jsonify({"message": "Failed to reset password. Please try again later."}), 500
+        
+
 @app.route('/check-auth', methods=['GET'])
 def check_auth():
     if 'email' in session:

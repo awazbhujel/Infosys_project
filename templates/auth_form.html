@@ -20,11 +20,11 @@
       <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
         <div class="slider round">
-          <span class="mode-icon">🌙</span>
-          <span class="mode-icon">☀️</span>
+            <span class="mode-icon">🌙</span>
+            <span class="mode-icon">☀️</span>
         </div>
       </label>
-    </div>
+   </div>
 
     <div class="container" role="main">
       <div class="form-wrapper">
@@ -47,6 +47,7 @@
                 </div>
                 <span class="voice-icon" id="voiceIconSignInEmail" aria-label="Start voice input for email">🎤</span>
               </div>
+              <span class="voice-status-text" id="voiceStatusTextSignInEmail"></span>
               <span class="error-message" id="signInEmailError" aria-live="assertive"></span>
             </div>
 
@@ -68,8 +69,13 @@
                 </div>
                 <span class="voice-icon" id="voiceIconSignInPassword" aria-label="Start voice input for password">🎤</span>
               </div>
+              <span class="voice-status-text" id="voiceStatusTextSignInPassword"></span>
               <span class="error-message" id="signInPasswordError" aria-live="assertive"></span>
             </div>
+            <p>
+              Forgot your password?
+              <a href="#" id="forgotPasswordLink">Reset Password</a>
+            </p>
             <button type="submit">Sign In</button>
             <p class="terms-text terms">By signing up, you agree to our terms and conditions.</p>
             <p>
@@ -79,16 +85,52 @@
           </form>
         </div>
 
+        <!-- Forgot Password Modal -->
+        <div id="forgotPasswordModal" class="modal">
+          <div class="modal-content">
+              <div class="modal-header"> <!-- New container for header and close button -->
+                  <h2>Forgot Password</h2>
+                  <span class="close">×</span> <!-- Close button next to the heading -->
+              </div>
+              <p>Enter your registered email address to reset your password.</p>
+              <form id="forgotPasswordForm">
+                  <div class="form-group">
+                      <label for="forgotPasswordEmail">Email:</label>
+                      <div class="input-wrapper">
+                          <div class="input-container">
+                              <input
+                                  type="email"
+                                  id="forgotPasswordEmail"
+                                  name="email"
+                                  required
+                                  aria-required="true"
+                                  aria-describedby="forgotPasswordEmailError"
+                              />
+                              <span class="clear-icon" id="clearForgotPasswordEmail" aria-label="Clear email input">❌</span>
+                          </div>
+                          <span class="voice-icon" id="voiceIconForgotPasswordEmail" aria-label="Start voice input for email">🎤</span>
+                      </div>
+                      <span class="voice-status-text" id="voiceStatusTextForgotPasswordEmail"></span>
+                      <span class="error-message" id="forgotPasswordEmailError" aria-live="assertive"></span>
+                  </div>
+                  <button type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
+
         <div class="form-container sign-up-container">
           <form id="signupForm">
             <h2>Sign Up</h2>
             <div class="form-group">
               <label for="username">Username:</label>
               <div class="input-wrapper">
-                <input type="text" id="username" class="form-control" />
+                <div class="input-container">
+                  <input type="text" id="username" class="form-control" />
+                  <span class="clear-icon" id="clearUsername" aria-label="Clear input">❌</span>
+                </div>
                 <span class="voice-icon" id="voiceIconUsername" aria-label="Start voice input for username">🎤</span>
-                <span class="clear-icon" id="clearIconSignInPassword" aria-label="Clear input">❌</span>
               </div>
+              <span class="voice-status-text" id="voiceStatusTextUsername"></span>
               <span class="error-message" id="usernameError" aria-live="assertive"></span>
             </div>
 
@@ -108,6 +150,7 @@
                 </div>
                 <span class="voice-icon" id="voiceIconEmail" aria-label="Start voice input for email">🎤</span>
               </div>
+              <span class="voice-status-text" id="voiceStatusTextEmail"></span>
               <span class="error-message" id="emailError" aria-live="assertive"></span>
             </div>
 
@@ -129,6 +172,7 @@
                 </div>
                 <span class="voice-icon" id="voiceIconPassword" aria-label="Start voice input for password">🎤</span>
               </div>
+              <span class="voice-status-text" id="voiceStatusTextPassword"></span>
               <span class="error-message" id="passwordError" aria-live="assertive"></span>
             </div>
 
@@ -150,6 +194,8 @@
         <p>© 2023 Voice-Enabled Bank Form. All rights reserved.</p>
       </div>
     </footer>
+    <div class="loader-overlay"></div>
+    <div class="loader"></div>
 
     <script type="module" src="/static/auth_script.js"></script>
 </body>
