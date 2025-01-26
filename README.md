@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# QWERTY_FORM_FILLING_PROJECT
-=======
 #Project Structure
 FORM/
 ├── .venv/                     
@@ -118,4 +115,3 @@ This application uses Supabase as the backend for storing the user and bank form
 
 
 
->>>>>>> voice-bank-form/main

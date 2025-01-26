@@ -1,0 +1,23 @@
+# Virtual Environment
+.venv/
+
+# VS Code Settings
+.vscode/
+
+# Flask Session Data
+flask_session/
+
+# Logs
+app.log
+
+# Environment Variables
+.env
+
+# Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Package files
+*.whl
+*.tar.gz
