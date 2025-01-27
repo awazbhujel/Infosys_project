@@ -6,12 +6,12 @@
 It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
 
 
-#Project Description
+# Project Description
 This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.  It consists of a web application and an Android application (APK) built from the same codebase.
 
-**Key Features:**
+# **Key Features:**
 
-**Web Application:**
+# **Web Application:**
 
 * **Secure User Authentication:**
     * User sign-up and sign-in with email, password, and username.
@@ -37,19 +37,21 @@ This project develops a voice-enabled, cross-platform solution for simplifying b
     * Loading indicators during processing.
 
 
-**Android Application (APK):**
+# **Android Application (APK):**
 
 * **Direct Installation:** Installable directly on Android devices.
 * **Functional Equivalence:** Provides the same functionality as the web application.
 * **Native App-Like Experience:** Offers a smooth user experience without requiring a browser.
 
 
-**Technologies Used:**
+# **Technologies Used:**
 
 * **Web Application (Frontend):** HTML, CSS, JavaScript (including form validation, voice input, session handling, theme switching, Speech Recognition API, and Fetch API).
 * **Web Application (Backend):** Python (Flask framework), Flask-Mail, Flask-Session, bcrypt, Requests library, ReportLab.
 * **Database:** Supabase (cloud-based Postgres database).
-* **Android APK Packaging:**  Tools like PWA Builder, Capacitor, or Cordova are used to package the web application into an installable APK.  
+* **Android APK Packaging:**  Tools like PWA Builder, is used to package the web application into an installable APK.  
 
-
+# Comclusion
 This project aims to improve the accessibility and user-friendliness of the bank account application process by leveraging voice input, cross-platform availability, and a secure, robust architecture.
+
+#
