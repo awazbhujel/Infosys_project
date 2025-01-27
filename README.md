@@ -1,117 +1,61 @@
-#Project Structure
-FORM/
-├── .venv/                     
-├── .vscode/
-├── flask_session/         -get created through library 
-├── static/                -add like these 
-│ ├── auth_script.js
-│ ├── bank_script.js
-│ └── bank_style.css
-├── templates/             -add like these 
-│ ├── auth_form.html
-│ └── bank_form.html
-├── .env
-├── .env.example
-├── app.log 
-├── app.py                 -add like these 
-├── README.md
-└── requirements.txt
+# Beyond-QWERTY: Form-Filling Project
 
-# Voice-Enabled Bank Form Application
+ [Click Here For Website Link](https://voice-bank-form.onrender.com/)
+ 
+You can download the latest APK here:
 
-This is a web application for a bank form that uses voice input and provides user authentication.
+[Download Latest APK](https://github.com/ARYANJATHAR/QWERTY_FORM_FILLING_PROJECT/blob/main/BankForm.apk)
+ 
 
-## Local Setup Guide
-
-Follow these instructions to run the application locally on your development machine.
-
-### Prerequisites
--   **Python 3.6+:** Ensure Python is installed.
--   **pip:** Python package installer should also be installed.
--   **Git:** Version control system should be installed.
-    * Install Git [here](https://git-scm.com/downloads)
-
-### Step-by-step Installation
-1.  **Clone the Repository:**
-
-    ```bash
-    git clone <YOUR_GITHUB_REPOSITORY_URL>
-    cd <YOUR_PROJECT_DIRECTORY_NAME>
-    ```
-
-    *Replace `<YOUR_GITHUB_REPOSITORY_URL>` with the URL of your repository.*
-    *Replace `<YOUR_PROJECT_DIRECTORY_NAME>` with the name of your project's directory.*
-
-2.  **Set Up a Virtual Environment (Recommended):**
-
-    ```bash
-    python3 -m venv venv
-    python -m venv venv(add any name)
-    source venv/bin/activate  # On macOS/Linux
-    venv\Scripts\activate # On Windows
-    ```
+# **Note:** 
+It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
 
 
-3.  **Install Dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    pip install python-dotenv
-    pip install bcrypt
-    pip install requests
-    pip  install flask-session
-    pip install flask
-    
-    ```
-
-4.  **Create a `.env` File:**
-
-    *   Create a `.env` file in your project's root directory.
-
-    *   Add the following variables to the `.env` file:
-
-        ```env
-        SECRET_KEY=<YOUR_SECRET_KEY>
-        SUPABASE_URL=<YOUR_SUPABASE_URL>
-        SUPABASE_KEY=<YOUR_SUPABASE_KEY>
-        ```
-
-        *   Replace `<YOUR_SECRET_KEY>` with a long, random string.
-        *   Replace `<YOUR_SUPABASE_URL>` with your Supabase project URL.
-        *   Replace `<YOUR_SUPABASE_KEY>` with your Supabase API key.
-
-5.  **Run the Application:**
-
-    ```bash
-    python app.py
-    ```
-    The application will start on http://127.0.0.1:5000/
-
-6.  **Open in your browser:**
-     *   Open a web browser and go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the application.
-
-7.  **Sign up with a valid email address (gmail.com, yahoo.com, outlook.com, hotmail.com, aol.com, or icloud.com)**
-    *  Log in with the same credentials you created.
-    *  Then fill in the form to submit to the database.
-    
- ### Notes
-
--   Ensure the .env file is added to your .gitignore file to prevent pushing sensitive data.
-
-### Dependencies
-The dependencies for this project are listed in the `requirements.txt` file.
-
-### Supabase Setup
-This application uses Supabase as the backend for storing the user and bank form data. Please make sure you have properly setup your Supabase project and database tables according to the column names in `transform_payload` function.
+# Project Description
+This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.The application allows users to fill out a comprehensive bank account application form using either their voice or traditional text input. This dual input method caters to a wider range of users, including those who may find voice input more convenient or accessible. The application captures user data, validates it in real-time, and generates a PDF copy of the completed application, which is then emailed to the user for their records. It consists of a web application and an Android application (APK) built from the same codebase.
 
 
 
+# Features : **Web Application:**
+
+* **Secure User Authentication:**
+    * User sign-up and sign-in with email, password, and username.
+    * Password hashing using bcrypt for security.
+    * Session management to maintain user login status.
+    * Forgot Password functionality with a time-limited reset token.
+* **Interactive Bank Account Application Form:**
+    * Comprehensive form with sections for personal, contact, employment, income, account details, and nominee information.
+    * Voice input support for all text input fields using JavaScript's Speech Recognition API.
+    * Real-time error display for invalid input and input clearing for easy correction.
+    * Client-side and server-side validation to ensure data integrity.  
+* **PDF Generation and Email Notification:**
+    * Generates a PDF copy of the submitted application using ReportLab.
+    * Sends the PDF to the user's email upon successful submission.
+    * Sends password reset and confirmation emails.
+* **Data Storage and Management:**
+    * Utilizes Supabase, a cloud-based Postgres database, for secure data storage.
+    * Employs secure API calls for database interactions.
+* **User Interface (UI) Features:**
+    * Modern and responsive design.
+    * Light/dark theme toggle for user preference.
+    * Clear and intuitive layout with helpful notifications.
+    * Loading indicators during processing.
 
 
+#  Features : **Android Application (APK):**
+
+* **Direct Installation:** Installable directly on Android devices.
+* **Functional Equivalence:** Provides the same functionality as the web application.
+* **Native App-Like Experience:** Offers a smooth user experience without requiring a browser.
 
 
+# **Technologies Used:**
 
+* **Web Application (Frontend):** HTML, CSS, JavaScript .
+* **Web Application (Backend):** Python (Flask framework) .
+* **Database:** Supabase (cloud-based Postgres database).
+* **Android APK Packaging:**  Tools like PWA Builder, is used to package the web application into an installable APK.  
 
-
-
+# Conclusion
+This project aims to improve the accessibility and user-friendliness of the bank account application process by leveraging voice input, cross-platform availability, and a secure, robust architecture.
 
