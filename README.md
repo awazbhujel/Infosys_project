@@ -1,13 +1,14 @@
 # Beyond-QWERTY: Form-Filling Project
 
  [Click Here For Website Link](https://voice-bank-form.onrender.com/)
+ 
 
 # **Note:** 
 It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
 
 
 # Project Description
-This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.  It consists of a web application and an Android application (APK) built from the same codebase.
+This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.The application allows users to fill out a comprehensive bank account application form using either their voice or traditional text input. This dual input method caters to a wider range of users, including those who may find voice input more convenient or accessible. The application captures user data, validates it in real-time, and generates a PDF copy of the completed application, which is then emailed to the user for their records. It consists of a web application and an Android application (APK) built from the same codebase.
 
 
 
@@ -51,7 +52,6 @@ This project develops a voice-enabled, cross-platform solution for simplifying b
 * **Database:** Supabase (cloud-based Postgres database).
 * **Android APK Packaging:**  Tools like PWA Builder, is used to package the web application into an installable APK.  
 
-# Comclusion
+# Conclusion
 This project aims to improve the accessibility and user-friendliness of the bank account application process by leveraging voice input, cross-platform availability, and a secure, robust architecture.
 
-#
