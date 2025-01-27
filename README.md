@@ -9,9 +9,9 @@ It may take time to go live for the first try as the server goes to sleep when i
 # Project Description
 This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.  It consists of a web application and an Android application (APK) built from the same codebase.
 
-**Key Features:**
 
-# **Web Application:**
+
+# Features : **Web Application:**
 
 * **Secure User Authentication:**
     * User sign-up and sign-in with email, password, and username.
@@ -37,7 +37,7 @@ This project develops a voice-enabled, cross-platform solution for simplifying b
     * Loading indicators during processing.
 
 
-# **Android Application (APK):**
+#  Features : **Android Application (APK):**
 
 * **Direct Installation:** Installable directly on Android devices.
 * **Functional Equivalence:** Provides the same functionality as the web application.
