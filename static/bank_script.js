@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (submitResponse.ok) {
-                showToast(`Your application has been submitted successfully.`, 'success');
+                showToast(`Your application has been submitted successfully, Please check your mail.`, 'success');
                 clearForm();
             } else {
                 showToast('Form submission failed. Please try again.', 'error');
