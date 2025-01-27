@@ -2,10 +2,10 @@
 
 # [Click Here For Live Demo](https://voice-bank-form.onrender.com/)
 
-**Note:** It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
+# **Note:** It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
 
 
-This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.  It consists of a web application and an Android application (APK) built from the same codebase.
+# This project develops a voice-enabled, cross-platform solution for simplifying bank account application form completion.  It consists of a web application and an Android application (APK) built from the same codebase.
 
 **Key Features:**
 
