@@ -2,6 +2,10 @@
 
  [Click Here For Website Link](https://voice-bank-form.onrender.com/)
  
+You can download the latest APK here:
+
+[Download Latest APK](https://github.com/ARYANJATHAR/QWERTY_FORM_FILLING_PROJECT/blob/main/BankForm.apk)
+ 
 
 # **Note:** 
 It may take time to go live for the first try as the server goes to sleep when inactive. A new request wakes up the service (cold start), which takes a few seconds. You might encounter a 502 (Bad Gateway error), in which case please try again after a few minutes.
