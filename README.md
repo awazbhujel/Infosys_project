@@ -51,8 +51,8 @@ This project develops a voice-enabled, cross-platform solution for simplifying b
 
 # **Technologies Used:**
 
-* **Web Application (Frontend):** HTML, CSS, JavaScript (including form validation, voice input, session handling, theme switching, Speech Recognition API, and Fetch API).
-* **Web Application (Backend):** Python (Flask framework), Flask-Mail, Flask-Session, bcrypt, Requests library, ReportLab.
+* **Web Application (Frontend):** HTML, CSS, JavaScript .
+* **Web Application (Backend):** Python (Flask framework) .
 * **Database:** Supabase (cloud-based Postgres database).
 * **Android APK Packaging:**  Tools like PWA Builder, is used to package the web application into an installable APK.  
 
